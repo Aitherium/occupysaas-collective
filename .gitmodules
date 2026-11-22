@@ -1,0 +1,9 @@
+[submodule "projects/zeroauthy"]
+	path = projects/zeroauthy
+	url = https://github.com/occupysaas/zeroauthy
+[submodule "projects/salescompel"]
+	path = projects/salescompel
+	url = https://github.com/occupysaas/salescompel
+[submodule "projects/website"]
+	path = projects/website
+	url = https://github.com/occupysaas/website

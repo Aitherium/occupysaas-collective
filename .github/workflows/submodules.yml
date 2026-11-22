@@ -1,0 +1,56 @@
+name: Submodules
+
+# Verifies every submodule sits at its pinned commit, and (weekly or manual)
+# opens a pull request that bumps every pin to its configured ref.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Every submodule is at its pinned commit
+        run: |
+          git submodule status --recursive
+          if git submodule status --recursive | grep -Eq '^[+-]'; then
+            echo '::error::a submodule is not at its pinned commit; run the bump job'
+            exit 1
+          fi
+
+  bump:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Bump every pin to its configured ref
+        run: git submodule update --remote --checkout
+      - name: Open a pull request when a pin moved
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet; then
+            echo 'no pins moved'
+            exit 0
+          fi
+          git checkout -b submodule-bump
+          git commit -am 'chore: bump submodule pins'
+          git push -u origin submodule-bump --force-with-lease
+          gh pr create --fill --base main || true
+          echo 'opened a pin-bump pull request for review'
+# umbrella: occupysaas
