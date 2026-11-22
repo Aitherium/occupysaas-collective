@@ -3,13 +3,18 @@
 A cloud node is useful for the embed and runner lanes, and for a twin that
 needs an always-on endpoint rather than a desktop that sleeps.
 
-## Status: in progress
+## Build an AMI in your own account
 
-The AMI builder is not published yet, so there is no fixed AMI id to
-quote here. Until it is, import the [awnix-ai-full ISO](spare-box.md) as
-an EC2 image, or run the [Linux install](linux.md) on an instance you
-already have. This page will carry the AMI id once it exists -- a guide
-that named one now would be inventing it.
+```bash
+curl -fsSL https://raw.githubusercontent.com/Aitherium/awnix/main/awnix-aws-ami.sh | sh -s -- --region us-east-1 --dry-run
+# drop --dry-run to build it
+```
+
+The builder runs bootc-image-builder against the public awnix image and
+creates the bucket, the import role, the AMI and an SSH-only security
+group in YOUR account, with YOUR credentials. `--dry-run` prints every
+step and calls neither AWS nor a container engine. It prints a ready
+`aws ec2 run-instances` command when it finishes.
 
 ## After it boots
 
