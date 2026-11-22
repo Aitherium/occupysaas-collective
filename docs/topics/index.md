@@ -14,6 +14,9 @@ works.
 - [How to contribute](contributing.md) -- where a change goes and how to propose
   it
 - [Governance](governance.md) -- how decisions are made across the collective
+- [How the collective decides what runs](how-the-collective-decides-what-runs.md)
+  -- council review, community quorum, and the signed permit a collective job
+  needs before it runs
 
 ## Shared vocabulary
 
