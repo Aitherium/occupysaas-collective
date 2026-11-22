@@ -42,6 +42,31 @@ permit is refused, and the refusal names the specification hash and where
 to propose it. Hub-internal work, which does not use member resources, is
 not subject to this gate.
 
+## Bad actors and broken workers
+
+Members lend hardware, so the collective assumes some workers can be wrong
+or hostile. Two rules bound that.
+
+Enrolment is attested. A node may join only while it runs a signed image:
+the hub verifies the image digest with cosign against the known signer,
+and requires the agent tools at pinned versions. The check is repeated on
+a schedule. A modified worker does not have a verified digest to show.
+
+Work is replicated. Deterministic jobs (builds, embeddings with a fixed
+model, quantisation, seeded runs) go to at least 3f+1 independent nodes
+run by different operators. A result is accepted only when 2f+1 nodes
+agree on the same signed output hash. A node that disagrees is
+quarantined, loses reputation and the credit for that unit, and is
+revoked if it repeats. Non-deterministic model work cannot agree on a
+hash, so the hub re-executes a sample of it and a judge decides whether
+the outputs are equivalent.
+
+Redundancy costs compute: deterministic work is multiplied by the
+replication factor, and judged work by one plus the sampling rate. The
+proposal records that trade-off. The fault tolerance, replication and
+sampling numbers are set by the operator in the governance
+configuration.
+
 ## Bootstrap and audit
 
 While the collective is bootstrapping, a founder veto can stop a proposal
