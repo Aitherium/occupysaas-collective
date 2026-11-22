@@ -1,29 +1,63 @@
 # OccupySaaS
 
-OccupySaaS -- one umbrella repository that gathers its member projects as REAL git submodules and hosts the shared knowledge base for all of them. Every member stays its own repository with its own history, licence and maintainers; this repository pins a commit of each.
+**Reclaiming the software ecosystem, one open-source project at a time.**
+
+OccupySaaS builds clean-room, open-source, drop-in replacements for the SaaS
+giants. This repository is the collective's umbrella: it gathers each project as a
+real git submodule and hosts the shared knowledge base for all of them. Every
+project stays its own repository with its own history, licence and maintainers;
+this repository pins an exact commit of each.
 
 ## Members
 
-| project | path | ref | licence |
+| project | what it is | path | licence |
 |---|---|---|---|
-| [zeroauthy](https://github.com/occupysaas/zeroauthy) | `projects/zeroauthy` | `5cf04cfac9f47d3fc2993c3ce2e14f0d2bf54c56` | Apache-2.0 |
-| [salescompel](https://github.com/occupysaas/salescompel) | `projects/salescompel` | `9a8a8cec74e9da75f95a906016df84696b8fd9b4` | Apache-2.0 |
-| [website](https://github.com/occupysaas/website) | `projects/website` | `5ba0a2db0a09f0100f6bbbcd8a11373cc74b9d40` | Apache-2.0 |
+| [zeroauthy](https://github.com/occupysaas/zeroauthy) | Self-hostable, Auth0-compatible identity server (OpenID Certified) | `projects/zeroauthy` | Apache-2.0 |
+| [salescompel](https://github.com/occupysaas/salescompel) | Salesforce-compatible CRM, built as a Go/PostgreSQL service with a Vue UI | `projects/salescompel` | Apache-2.0 |
+| [website](https://github.com/occupysaas/website) | The public site at occupysaas.com (static HTML/CSS/JS) | `projects/website` | Apache-2.0 |
+
+Pinned commits are recorded in `.gitmodules` and the gitlinks under `projects/`.
 
 ## Knowledge base
 
-Start at [docs/index.md](docs/index.md). Topics live in [`docs/topics`](docs/topics/), decisions in [`docs/adr`](docs/adr/) and shared vocabulary in [`docs/glossary.md`](docs/glossary.md).
+Start at [docs/index.md](docs/index.md). It links every topic, the decision
+records and the shared glossary:
+
+- [About OccupySaaS](docs/about.md) -- what the collective is and how it works
+- [Topics](docs/topics/index.md) -- one page per project, plus how to contribute
+- [Decisions](docs/adr/index.md) -- architecture decision records
+- [Glossary](docs/glossary.md) -- shared vocabulary
 
 ## Get it working
 
 ```bash
-git clone --recurse-submodules https://github.com/Aitherium/occupysaas.git
-cd occupysaas
+git clone --recurse-submodules https://github.com/Aitherium/occupysaas-collective.git
+cd occupysaas-collective
 git submodule status --recursive
 ```
 
-Bump every submodule to its configured ref with `python AitherOS/dev/tools/horizontal_repo_gen.py sync occupysaas.yaml --write` from the AitherOS monorepo, or `git submodule update --remote --checkout` by hand.
+Without `--recurse-submodules`, run `git submodule update --init --recursive`
+after cloning.
+
+## Keeping pins fresh
+
+A member is pinned to a commit, not to a moving branch, so a build is
+reproducible. Bump every pin to the current upstream head with:
+
+```bash
+git submodule update --remote --checkout
+```
+
+Review the staged gitlinks, commit them and open a pull request. A scheduled
+workflow opens the same bump as a pull request each week.
+
+## Contributing
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) and each project's own contribution
+rules before opening a pull request. Each project carries a clean-room policy
+that every contribution must follow.
 
 ## Licence
 
-Apache-2.0. Each member keeps its own licence; this repository never relicenses a submodule's code. Homepage: https://occupysaas.com.
+Apache-2.0. Each member keeps its own licence; this repository never relicenses
+a submodule's code. Homepage: <https://occupysaas.com>.

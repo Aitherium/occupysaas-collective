@@ -1,9 +1,29 @@
 # Topics
 
-One page per member project.
+One page per member project, plus the pages that explain how the collective
+works.
 
-- [zeroauthy](zeroauthy.md) -- `projects/zeroauthy`
-- [salescompel](salescompel.md) -- `projects/salescompel`
-- [website](website.md) -- `projects/website`
+## Projects
 
-Create a new topic page beside these and link it from here; the docs CI job fails on a relative link that does not resolve.
+- [zeroauthy](zeroauthy.md) -- Auth0-compatible identity server
+- [salescompel](salescompel.md) -- Salesforce-compatible CRM
+- [website](website.md) -- the public site at occupysaas.com
+
+## How the collective works
+
+- [How to contribute](contributing.md) -- where a change goes and how to propose
+  it
+- [Governance](governance.md) -- how decisions are made across the collective
+
+## Shared vocabulary
+
+- [Glossary](../glossary.md) -- terms used across the knowledge base
+
+## Decisions
+
+- [Decision records](../adr/index.md) -- architecture decisions, numbered and
+  never rewritten
+
+## About
+
+- [About OccupySaaS](../about.md) -- what the collective is
