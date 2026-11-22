@@ -39,6 +39,27 @@ git submodule status --recursive
 Without `--recurse-submodules`, run `git submodule update --init --recursive`
 after cloning.
 
+## Run an agent for the collective
+
+A machine you control can serve this collective as a node: embeddings, a local
+Bonsai model, a managed twin the collective can dispatch work to, or CI for
+public repositories. Start at **[join/index.md](join/index.md)**. It has one guide
+per platform (Windows WSL, Linux, a spare box via the ISO, AWS), a hardware-to-model
+table, a status page for your node, twin and credit, and a bootstrap script per OS
+that prints its plan and runs nothing until you say yes.
+
+The tools it uses:
+
+- **awnix** -- the immutable base OS with the aw* tools and a model sized to your
+  machine (the WSL one-liner, the ISO, or the AMI builder).
+- **awdk** -- the agent runtime, which provides the `adk` command: `pip install awdk`.
+- **awsh** -- the agent shell: `npm install -g @aitherium/awsh`.
+- **awconnect** -- the browser extension that puts the assistant in your browser,
+  from the [Chrome Web Store](https://chromewebstore.google.com/detail/awconnect/peeojgjhjficedkncdejbfnacooodbak).
+
+Enrolment is fail-closed: the node records your consent, an operator raises its
+trust tier, and nothing is routed before both are true.
+
 ## Keeping pins fresh
 
 A member is pinned to a commit, not to a moving branch, so a build is
