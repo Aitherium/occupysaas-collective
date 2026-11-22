@@ -23,7 +23,7 @@ authenticated, so there is no anonymous path.
 ## 3. Enrol
 
 ```bash
-adk volunteer enroll --lane embed,bonsai --collective occupysaas
+adk volunteer enroll --lane embed,bonsai --collective occupysaas --relay-channel '#occupysaas'
 ```
 
 A lane that needs operator trust records the request and tells you it is

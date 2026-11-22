@@ -15,7 +15,7 @@ Prefer a sealed image? Use the [spare-box ISO path](spare-box.md).
 
 ```bash
 adk login
-adk volunteer enroll --lane embed,bonsai --collective occupysaas
+adk volunteer enroll --lane embed,bonsai --collective occupysaas --relay-channel '#occupysaas'
 ```
 
 ## 3. Serve

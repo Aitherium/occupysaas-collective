@@ -7,6 +7,7 @@ set -euo pipefail
 
 COLLECTIVE='occupysaas'
 LANE='embed,bonsai'
+RELAY_CHANNEL='#occupysaas'
 AWNIX='https://raw.githubusercontent.com/Aitherium/awnix/main/install.sh'
 YES=0
 SKIP_AWNIX=0
@@ -16,17 +17,21 @@ while [ $# -gt 0 ]; do
     --yes|-y) YES=1 ;;
     --collective) COLLECTIVE="$2"; shift ;;
     --lane) LANE="$2"; shift ;;
+    --relay-channel) RELAY_CHANNEL="$2"; shift ;;
     --skip-awnix) SKIP_AWNIX=1 ;;
     *) echo "unknown option: $1" >&2; exit 2 ;;
   esac
   shift
 done
 
+relay_flag=''
+[ -n "$RELAY_CHANNEL" ] && relay_flag="--relay-channel $RELAY_CHANNEL"
+
 cat <<EOF
 Plan:
   1. $( [ "$SKIP_AWNIX" = 1 ] && echo 'skip awnix (already installed)' || echo "install awnix: curl -fsSL $AWNIX | sudo sh" )
   2. adk login
-  3. adk volunteer enroll --lane $LANE --collective $COLLECTIVE
+  3. adk volunteer enroll --lane $LANE --collective $COLLECTIVE $relay_flag
   4. adk volunteer serve --lane bonsai
   5. adk volunteer start --lane embed
   6. adk volunteer status
@@ -47,7 +52,7 @@ command -v adk >/dev/null 2>&1 || {
   exit 1
 }
 adk login
-adk volunteer enroll --lane "$LANE" --collective "$COLLECTIVE"
+adk volunteer enroll --lane "$LANE" --collective "$COLLECTIVE" $relay_flag
 adk volunteer serve --lane bonsai
 adk volunteer start --lane embed
 adk volunteer status

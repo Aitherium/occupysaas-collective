@@ -44,9 +44,10 @@ after cloning.
 A machine you control can serve this collective as a node: embeddings, a local
 Bonsai model, a managed twin the collective can dispatch work to, or CI for
 public repositories. Start at **[join/index.md](join/index.md)**. It has one guide
-per platform (Windows WSL, Linux, a spare box via the ISO, AWS), a hardware-to-model
-table, a status page for your node, twin and credit, and a bootstrap script per OS
-that prints its plan and runs nothing until you say yes.
+per platform (Windows WSL, Linux, a spare box via the ISO, AWS, or the browser for a
+member with no spare box), a hardware-to-model table, a status page for your node,
+twin and credit, and a bootstrap script per OS that prints its plan and runs nothing
+until you say yes.
 
 The tools it uses:
 
@@ -56,6 +57,14 @@ The tools it uses:
 - **awsh** -- the agent shell: `npm install -g @aitherium/awsh`.
 - **awconnect** -- the browser extension that puts the assistant in your browser,
   from the [Chrome Web Store](https://chromewebstore.google.com/detail/awconnect/peeojgjhjficedkncdejbfnacooodbak).
+- **awbonsai** -- runs a Bonsai in the visitor's browser on its own GPU; the lightest
+  tier, for a member with no spare box (`npm install @aitherium/awbonsai`). It is an
+  inference library, not a work queue: it does not accept collective work yet.
+- **awrelay** -- the collective's channel for findings, alerts and work coordination
+  (`pip install awrelay`). Enrolment subscribes the node to it.
+- **awedgerunner** -- the lease and router that runs agent and CI work on edge
+  runners (volunteer GPUs, CI minutes, mesh devices) under a hard budget cap. It
+  ships in-tree with awnix/awdk and is not yet its own published package.
 
 Enrolment is fail-closed: the node records your consent, an operator raises its
 trust tier, and nothing is routed before both are true.

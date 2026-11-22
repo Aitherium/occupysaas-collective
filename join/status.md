@@ -25,3 +25,14 @@ nothing.
 
 A Discord credit surface is not built yet; the balance lives in `adk wallet`
 until it is.
+
+## How work reaches you
+
+The collective does not run your machine directly: a job is placed under a
+lease by **awedgerunner**, which delegates to the adapter for the target (the
+volunteer node, a CI runner, a mesh device) and ends on expiry or budget. Your
+node is one of those targets.
+
+Coordination is on **awrelay**: if enrolment gave a relay channel, the node
+posts there and reads it with `awrelay inbox`. That is how the fleet talks to
+it and how it reports status; `adk volunteer status` shows the channel.

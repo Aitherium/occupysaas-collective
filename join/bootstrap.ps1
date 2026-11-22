@@ -5,12 +5,14 @@
 # published installer or an `adk` command.
 param(
     [string]$Collective = 'occupysaas',
+    [string]$RelayChannel = '#occupysaas',
     [string[]]$Lane = @('embed'),
     [switch]$Yes,
     [switch]$SkipAwnix
 )
 $ErrorActionPreference = 'Stop'
 $awnix = 'https://raw.githubusercontent.com/Aitherium/awnix/main/.DEPLOYMENT/standalone/bootc/install-awnix-wsl.ps1'
+$relayArg = if ($RelayChannel) { " --relay-channel `"$RelayChannel`"" } else { '' }
 # -Lane embed,bonsai binds as ONE string when passed from a command line;
 # split it so the bonsai check below sees real lane names.
 $Lane = @($Lane | ForEach-Object { $_ -split ',' } |
@@ -21,7 +23,7 @@ $laneArg = ($Lane -join ',')
 $plan = @(
     "$(if ($SkipAwnix) { 'skip awnix (already installed)' } else { "install awnix: irm $awnix | iex" })",
     'adk login',
-    "adk volunteer enroll --lane $laneArg --collective $Collective",
+    "adk volunteer enroll --lane $laneArg --collective $Collective$relayArg",
     "adk volunteer serve --lane $(if ($Lane -contains 'bonsai') { 'bonsai' } else { 'embed' })",
     'adk volunteer start --lane embed',
     'adk volunteer status'
@@ -44,7 +46,7 @@ if (-not (Get-Command adk -ErrorAction SilentlyContinue)) {
     throw 'adk is not on PATH. Install awdk (pip install awdk) and re-run.'
 }
 adk login
-adk volunteer enroll --lane $laneArg --collective $Collective
+adk volunteer enroll --lane $laneArg --collective $Collective$relayArg
 adk volunteer serve --lane $(if ($Lane -contains 'bonsai') { 'bonsai' } else { 'embed' })
 adk volunteer start --lane embed
 adk volunteer status

@@ -20,7 +20,7 @@ On the box:
 
 ```bash
 adk login
-adk volunteer enroll --lane embed,bonsai --collective occupysaas
+adk volunteer enroll --lane embed,bonsai --collective occupysaas --relay-channel '#occupysaas'
 adk volunteer serve --lane bonsai
 adk volunteer start --lane embed
 ```

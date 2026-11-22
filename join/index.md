@@ -9,6 +9,7 @@ path that matches what you have; every path ends in the same commands.
 | a Linux box | [Linux](linux.md) |
 | a spare PC | [Boot the ISO](spare-box.md) |
 | an AWS account | [AWS](aws-ami.md) |
+| no spare box | [The browser tier](browser.md) |
 
 ## The path is the same everywhere
 
@@ -17,7 +18,7 @@ path that matches what you have; every path ends in the same commands.
 2. Sign in: `adk login`.
 3. Enrol and register with the collective:
    ```bash
-   adk volunteer enroll --lane embed,bonsai --collective occupysaas
+   adk volunteer enroll --lane embed,bonsai --collective occupysaas --relay-channel '#occupysaas'
    ```
 4. Serve what you chose:
    ```bash

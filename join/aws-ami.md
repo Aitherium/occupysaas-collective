@@ -20,7 +20,7 @@ step and calls neither AWS nor a container engine. It prints a ready
 
 ```bash
 adk login
-adk volunteer enroll --lane embed,twin --collective occupysaas \
+adk volunteer enroll --lane embed,twin --collective occupysaas --relay-channel '#occupysaas' \
   --invoke-url https://<your-node-host>/v1
 ```
 
