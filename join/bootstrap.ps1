@@ -11,6 +11,11 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 $awnix = 'https://raw.githubusercontent.com/Aitherium/awnix/main/.DEPLOYMENT/standalone/bootc/install-awnix-wsl.ps1'
+# -Lane embed,bonsai binds as ONE string when passed from a command line;
+# split it so the bonsai check below sees real lane names.
+$Lane = @($Lane | ForEach-Object { $_ -split ',' } |
+          ForEach-Object { $_.Trim() } | Where-Object { $_ })
+if (-not $Lane) { $Lane = @('embed') }
 $laneArg = ($Lane -join ',')
 
 $plan = @(
