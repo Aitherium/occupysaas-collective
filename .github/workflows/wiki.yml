@@ -1,8 +1,6 @@
 name: Wiki
 
 on:
-  schedule:
-    - cron: "17 6 * * *"   # daily mirror, wiki -> repo
   workflow_dispatch:
   push:
     branches: [main]
@@ -35,32 +33,29 @@ jobs:
           WIKI_BOT_PASSWORD: ${{ secrets.WIKI_BOT_PASSWORD }}
           EVENT: ${{ github.event_name }}
         run: |
-          if [ "$EVENT" = "push" ] && [ -n "$WIKI_BOT_PASSWORD" ]; then
-            python3 scripts/wiki_sync.py publish --apply
-          else
-            python3 scripts/wiki_sync.py publish
+          args=""
+          if [ "$EVENT" = "push" ] && [ -n "$WIKI_BOT_PASSWORD" ]; then args="--apply"; fi
+          rc=0; python3 scripts/wiki_sync.py publish $args || rc=$?
+          if [ "$rc" = 2 ]; then
+            echo "::warning::the wiki refused this runner (403); publish runs from the collective's own host"
+            exit 0
           fi
+          exit "$rc"
 
   mirror:
-    # wiki -> repo, as a pull request so every wiki change is reviewable here.
-    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    # wiki -> repo. Miraheze answers 403 to GitHub-hosted runners, so the daily mirror
+    # runs on the collective's own host (scripts/wiki_mirror_pr.sh); this job is the
+    # manual fallback and reports a 403 as a warning, not a pass.
+    if: github.event_name == 'workflow_dispatch'
     needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 scripts/wiki_sync.py mirror
-      - name: Open or update the mirror pull request
+        with: {fetch-depth: 0}
+      - name: Mirror and open the pull request
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git add -A wiki/mirror
-          if git diff --cached --quiet; then echo "wiki unchanged"; exit 0; fi
-          git config user.name "wiki-mirror"
-          git config user.email "wiki-mirror@users.noreply.github.com"
-          git fetch origin wiki-mirror || true
-          git checkout -B wiki-mirror
-          git commit -q -m "wiki: mirror pages from occupysaas.miraheze.org"
-          git push --force-with-lease origin wiki-mirror
-          gh pr view wiki-mirror >/dev/null 2>&1 || gh pr create --head wiki-mirror --base main \
-            --title "wiki: mirror pages from the wiki" \
-            --body "Daily copy of https://occupysaas.miraheze.org/ (scripts/wiki_sync.py mirror). Review the diff to see what changed on the wiki."
+          rc=0; bash scripts/wiki_mirror_pr.sh || rc=$?
+          if [ "$rc" = 2 ]; then echo "::warning::the wiki refused this runner (403)"; exit 0; fi
+          exit "$rc"

@@ -29,6 +29,7 @@ import os
 import re
 import subprocess
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -47,6 +48,10 @@ MARKER = "<!-- generated from the occupysaas-collective repo; edit {src} there -
 UNSAFE = re.compile(r'[<>:"\\|?*\x00-\x1f]')
 
 
+class WikiRefused(RuntimeError):
+    """The wiki answered 403 to this machine (Miraheze refuses some cloud ranges, e.g. CI)."""
+
+
 class Wiki:
     def __init__(self, api: str = API) -> None:
         self.api = api
@@ -61,8 +66,13 @@ class Wiki:
         else:
             req = urllib.request.Request(self.api + "?" + data.decode())
         req.add_header("User-Agent", USER_AGENT)
-        with self.opener.open(req, timeout=60) as resp:
-            body = json.load(resp)
+        try:
+            with self.opener.open(req, timeout=60) as resp:
+                body = json.load(resp)
+        except urllib.error.HTTPError as exc:
+            if exc.code == 403:
+                raise WikiRefused("the wiki refused this machine (HTTP 403)") from exc
+            raise
         if "error" in body:
             raise RuntimeError("wiki API error: %s" % body["error"])
         return body
@@ -204,9 +214,14 @@ def main(argv: list[str] | None = None) -> int:
     pub.add_argument("--force", action="store_true", help="overwrite pages a person edited last")
     args = ap.parse_args(argv)
     wiki = Wiki()
-    if args.cmd == "mirror":
-        return mirror(wiki)
-    return publish(wiki, args.apply, args.force)
+    try:
+        if args.cmd == "mirror":
+            return mirror(wiki)
+        return publish(wiki, args.apply, args.force)
+    except WikiRefused as exc:
+        # 2 = could not judge: not a pass, not a content failure.
+        print("%s; run this from a machine the wiki answers (see wiki/README.md)" % exc)
+        return 2
 
 
 if __name__ == "__main__":

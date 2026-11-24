@@ -7,7 +7,7 @@ step, one direction at a time.
 
 | direction | what moves | credentials | when |
 |---|---|---|---|
-| wiki -> repo (`mirror`) | every page's wikitext into `wiki/mirror/`, plus `index.json` (last editor, timestamp) | none: the wiki is public | daily, as a pull request |
+| wiki -> repo (`mirror`) | every page's wikitext into `wiki/mirror/`, plus `index.json` (last editor, timestamp) | none: the wiki is public | daily from the collective's host (`scripts/wiki_mirror_pr.sh`), as a pull request |
 | repo -> wiki (`publish`) | only the markdown files listed in `publish.json` | a bot password | on every push to `main`; dry run on pull requests |
 
 Rules the script enforces:
@@ -26,6 +26,14 @@ Rules the script enforces:
 2. In this repository's settings, add them as Actions secrets
    `WIKI_BOT_USER` and `WIKI_BOT_PASSWORD`.
 3. The next push to `main` publishes. Until then the workflow runs as a dry run.
+
+## Where it runs
+
+Miraheze answers HTTP 403 to GitHub-hosted runners, so the scripts exit 2
+(could not judge) there and the workflow reports a warning, never a pass. The
+daily mirror and the real publish run on the collective's own host, which the
+wiki answers. Any member's machine works the same way:
+`bash scripts/wiki_mirror_pr.sh`.
 
 ## Run it yourself
 
