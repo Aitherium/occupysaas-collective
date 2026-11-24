@@ -4,9 +4,12 @@
 # machine the wiki answers (Miraheze returns 403 to GitHub-hosted runners).
 set -euo pipefail
 cd "$(dirname "$0")/.."
+# python3 on Windows is often the Store stub; fall back to python.
+PY="${PYTHON:-}"
+if [ -z "$PY" ]; then if python3 -c "" 2>/dev/null; then PY=python3; else PY=python; fi; fi
 git fetch -q origin main
 git checkout -q -B wiki-mirror origin/main
-"${PYTHON:-python3}" scripts/wiki_sync.py mirror
+"$PY" scripts/wiki_sync.py mirror
 git add -A wiki/mirror
 if git diff --cached --quiet; then echo "wiki unchanged"; exit 0; fi
 git -c user.name=wiki-mirror -c user.email=wiki-mirror@users.noreply.github.com \
