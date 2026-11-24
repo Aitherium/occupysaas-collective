@@ -6,7 +6,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 git fetch -q origin main
 git checkout -q -B wiki-mirror origin/main
-python3 scripts/wiki_sync.py mirror
+"${PYTHON:-python3}" scripts/wiki_sync.py mirror
 git add -A wiki/mirror
 if git diff --cached --quiet; then echo "wiki unchanged"; exit 0; fi
 git -c user.name=wiki-mirror -c user.email=wiki-mirror@users.noreply.github.com \
