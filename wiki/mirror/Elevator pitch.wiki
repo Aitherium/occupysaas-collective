@@ -1,0 +1,25 @@
+Drafted from occupysaas.com. Edit freely; see [[Outreach: how to describe us to people outside the collective|Outreach]] for audience-specific versions.
+
+<span id="seconds"></span>
+== 10 seconds ==
+
+They laid us off. We’re rebuilding their SaaS, open source and clean room.
+
+<span id="seconds-1"></span>
+== 30 seconds ==
+
+OccupySaaS is a protest movement written in code. Laid-off engineers, using AI and public documentation, are building open-source, drop-in replacements for the SaaS platforms that charge per seat. You can already try an Auth0-compatible identity server, and a Salesforce-compatible CRM is on the way. Everything is Apache-2.0 and self-hostable, and there is no seat counter.
+
+<span id="one-paragraph"></span>
+== One paragraph ==
+
+Every company runs on a handful of subscriptions that charge by the head and lock customers in with proprietary APIs, while the engineers who built those platforms were shown the door. We rebuild them in the open. We write specifications from public API references and open standards, keep spec writers and builders on opposite sides of a firewall, let AI agents implement from the spec under human review, and then prove compatibility by running the vendors’ own public SDKs against our servers. If your existing code does not work unchanged, it is not done. Our first release candidate, [[ZeroAuthy]], is OpenID Certified; [[SalesCompel]] is earlier, and says exactly what works today.
+
+<span id="claims-to-avoid"></span>
+== Claims to avoid ==
+
+* Do not call either project production-ready. Both are early previews.
+* Do not claim 1:1 Salesforce compatibility for SalesCompel. It has not been certified.
+* Say “compatible with” or “replaces”, never “is” or “by” a vendor. We are not affiliated with any vendor named.
+
+[[Category:About]]

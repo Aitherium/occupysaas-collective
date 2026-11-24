@@ -1,0 +1,46 @@
+<span id="the-loop"></span>
+== The loop ==
+
+# Read the project’s <code>CLEAN_ROOM.md</code> and README. Contributions to every project follow its clean-room policy.
+# Find or open an issue. For anything larger than a small fix, say what you plan to do before you start.
+# Work only from public material. Record the source of any reference you add (provenance).
+# Add or update tests. Compatibility tests against real vendor SDKs decide what counts as done.
+# Open a pull request. A human reviews every change before merge.
+# Say plainly in the pull request whether AI wrote part of it.
+
+<span id="kinds-of-contribution"></span>
+== Kinds of contribution ==
+
+{| class="wikitable"
+|-
+! You
+! Do
+|-
+| Write code
+| Pick an open issue and open a pull request
+|-
+| Run it
+| Self-host a release against your real SDKs and report precisely where it breaks
+|-
+| Write specs
+| Turn public docs into precise, testable specifications
+|-
+| Spread the word
+| See [[Outreach: how to describe us to people outside the collective|Outreach]]
+|-
+| Propose a target
+| See [[How to propose a new project]]
+|}
+
+<span id="where-to-start"></span>
+== Where to start ==
+
+* [[ZeroAuthy]] and [[SalesCompel]] each describe what works and what is missing, so you can choose a gap.
+* The Rust port of any project is an open invitation: open an issue naming the project.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: contributor agreement (DCO, CLA or none) and the branch and commit conventions each repo expects.
+
+[[Category:Engineering]]

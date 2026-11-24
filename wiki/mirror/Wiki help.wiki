@@ -1,0 +1,5 @@
+* [[How to edit]]
+* [[Style guide]]
+* [[Where things go]]
+
+[[Category:Wiki help]]

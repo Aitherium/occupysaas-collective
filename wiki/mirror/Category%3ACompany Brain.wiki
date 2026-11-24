@@ -1,0 +1,3 @@
+A set of small tools for putting a company knowledge base behind a Discord bot.
+
+[[Category:Projects]]

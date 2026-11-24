@@ -1,0 +1,36 @@
+<span id="roles-that-already-exist-in-practice"></span>
+== Roles that already exist in practice ==
+
+{| class="wikitable"
+|-
+! Role
+! What they do
+! Source
+|-
+| Spec writer
+| Turns public documentation and open standards into specifications; stays on the public-spec side of the firewall
+| [[Rules of the road]]
+|-
+| Builder
+| Implements from the spec, with AI agents, and never sees confidential material
+| [[How we develop]]
+|-
+| Reviewer
+| A human who reviews every change before merge
+| [[How we develop]]
+|-
+| Maintainer
+| Approves releases in GitHub Actions
+| [[How we develop]]
+|-
+| Contributor
+| Anyone who writes code, specs or tests, runs a release, or spreads the word
+| [[Welcome and onboarding]]
+|}
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: who holds each role now, how someone becomes a maintainer, and whether a role can be held by one person across the firewall (it should not, within one project).
+
+[[Category:Governance and decisions]]

@@ -1,0 +1,34 @@
+[[Company Brain]] › Categories › Memory and knowledge
+
+Bricks that let an agent remember, and let you check what it remembers.
+
+{| class="wikitable"
+|-
+! Brick
+! You check…
+! Page here
+|-
+| [[Company Brain/awbrain|awbrain]]
+| claims against the source line that produced them
+| yes
+|-
+| <code>awm</code>
+| that memory stayed in its lane (tenant:user:project scopes)
+| no
+|-
+| <code>awgraph</code>
+| that grep found everything (AST call graph)
+| no
+|-
+| <code>awknowledge</code>
+| the laws for running a coding agent so the result survives
+| no
+|-
+| <code>awmine</code>
+| that a session’s lesson survived the session
+| no
+|}
+
+The idea shared by the whole family: replace something you would have to ''trust'' with something you can ''check''.
+
+[[Category:Company Brain]]

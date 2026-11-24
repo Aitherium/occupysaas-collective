@@ -1,0 +1,39 @@
+<span id="clean-room-rules"></span>
+== Clean-room rules ==
+
+These come from the method described on occupysaas.com and from each project’s <code>CLEAN_ROOM.md</code>. The project policy always wins if the two differ.
+
+'''Allowed in'''
+
+* Public API documentation
+* Open standards and RFCs
+* Public SDK behaviour
+* Black-box test results
+
+'''Never allowed'''
+
+* Leaked or proprietary source
+* Decompiled binaries
+* Former-employer confidential information
+* Copied UI assets or trademarks
+
+<span id="former-employees-of-the-vendors"></span>
+== Former employees of the vendors ==
+
+You are welcome, but never with confidential knowledge from a former employer. Anyone with relevant inside knowledge should stay on the public-spec side of the firewall or sit that project out. When in doubt, read the project’s <code>CLEAN_ROOM.md</code> and ask before contributing.
+
+<span id="working-rules"></span>
+== Working rules ==
+
+* Specs and contracts come first (for example <code>openapi.yaml</code>), then code, then tests.
+* A human reviews every change before merge, even when AI wrote it.
+* Compatibility tests against real vendor SDKs decide what counts as done.
+* Say what is planned and what is shipped. Do not describe unbuilt features as working.
+* Use vendor names only to describe compatibility.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: code of conduct, conflict handling, and what happens when a rule is broken.
+
+[[Category:About]]

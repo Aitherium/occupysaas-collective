@@ -1,0 +1,12 @@
+Help for members who want to build a business, or a funded organization, around our open source commons. The projects are Apache-2.0, so you may run them, fork them and sell services around them.
+
+* [[Funding]]: the options and how to choose
+** [[Non-profit funding sources]]
+** [[Basic business setup]]
+** [[Fiscal sponsorship]]: Model A and Model C explained
+** [[Grant-writing help]]
+** [[For-profit funding]]
+
+These pages are general information, mostly US-centric, and not legal, tax or financial advice. Check current terms with each funder before acting.
+
+[[Category:Business resources]]

@@ -1,0 +1,39 @@
+There are two broad routes to money for work built on the commons.
+
+{| class="wikitable"
+|-
+!
+! Non-profit route
+! For-profit route
+|-
+| '''Typical money'''
+| Grants, tax-deductible donations
+| Customer revenue, services, investment
+|-
+| '''Needs'''
+| A tax-exempt entity, or a fiscal sponsor
+| A business entity and customers
+|-
+| '''Constraint'''
+| Mission and reporting rules; slower
+| Needs a revenue model; investors want returns
+|-
+| '''Start at'''
+| [[Non-profit funding sources]]
+| [[For-profit funding]]
+|}
+
+<span id="choosing"></span>
+== Choosing ==
+
+# Decide whether you want to run a business, or to fund open source work as a public good. The answer picks the route.
+# Do the [[Basic business setup|basic business setup]] either way: you need an entity or a sponsor, and a bank account.
+# If you take the non-profit route without your own tax-exempt entity, read [[Fiscal sponsorship]] before applying for grants, because many funders only give to tax-exempt organizations.
+# If you pursue grants, read [[Grant-writing help]].
+
+<span id="the-collectives-own-funding"></span>
+== The collective’s own funding ==
+
+The collective itself takes donations through GoFundMe, GiveSendGo and Buy Me a Coffee (see [[Outbound messaging]]). Whether it will have a legal entity or sponsor is still open (see [[How we are organized]]).
+
+[[Category:Business resources]]

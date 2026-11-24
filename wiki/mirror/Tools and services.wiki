@@ -1,0 +1,43 @@
+What we use, and who to ask.
+
+{| class="wikitable"
+|-
+! Tool or service
+! Used for
+! Who to ask
+|-
+| GitHub organization ([https://github.com/occupysaas occupysaas])
+| Code, issues, releases, GitHub Actions
+| TODO: needs input from the founders
+|-
+| Discord ([https://discord.gg/jZYA3r27tG invite])
+| Chat and coordination
+| TODO: needs input from the founders
+|-
+| Website repository ([https://github.com/occupysaas/website occupysaas/website])
+| The public site, and target proposals
+| TODO: needs input from the founders
+|-
+| Container registry (ghcr.io/occupysaas)
+| ZeroAuthy images
+| TODO: needs input from the founders
+|-
+| GoFundMe, GiveSendGo, Buy Me a Coffee
+| Donations
+| TODO: needs input from the founders
+|-
+| This wiki (Miraheze)
+| Handbook
+| See [[Wiki help]]
+|-
+| Aither World tools
+| AI agent development
+| See [[Aither World]]
+|}
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: the owner of each account, where credentials are kept, and how access is granted and revoked when people leave. See [[How to join and how to leave]].
+
+[[Category:Engineering]]

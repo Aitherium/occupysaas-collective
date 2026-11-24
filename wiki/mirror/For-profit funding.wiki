@@ -1,0 +1,46 @@
+The projects are Apache-2.0, so a business may build on them. This is general information, not financial or legal advice.
+
+<span id="options"></span>
+== Options ==
+
+{| class="wikitable"
+|-
+! Route
+! How it works
+! Fit
+|-
+| Services around the commons
+| Hosting, migration, support, integration and training for teams moving off a vendor
+| Needs no outside money; builds on the “no seat counter” appeal
+|-
+| Customer prepayments
+| Early customers fund work they need
+| Works once something runs; see project status
+|-
+| Sponsorship and donations
+| GitHub Sponsors, Open Collective, direct support from companies that depend on the software
+| Slow to build; best with an adopted project
+|-
+| Bootstrapping
+| Fund from savings or other work
+| Keeps control and independence
+|-
+| Investors
+| Equity or revenue-based financing
+| Rarely a fit for software given away under a permissive licence unless a services or hosting business sits on top
+|}
+
+<span id="cautions"></span>
+== Cautions ==
+
+* A permissive licence means anyone, including a large vendor, may run and sell the same software. Compete on service, trust and fit, not on exclusivity.
+* Do not imply affiliation with the vendors whose APIs we are compatible with.
+* Tell customers plainly which project features are shipped and which are planned (see [[Outbound messaging]]).
+* Keep the business separate from the collective’s accounts (see [[Basic business setup]]).
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: the collective’s position on members commercializing the projects, and whether a trademark or naming policy is needed.
+
+[[Category:Business resources]]

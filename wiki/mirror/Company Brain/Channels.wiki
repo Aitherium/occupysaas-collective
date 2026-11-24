@@ -1,0 +1,35 @@
+[[Company Brain]] › Categories › Channels
+
+Where an agent talks to people.
+
+{| class="wikitable"
+|-
+! Channel
+! Brick
+! Notes
+|-
+| Discord
+| [[Company Brain/awdiscord|awdiscord]]
+| A real bot with slash commands, plugins, voice, approvals
+|-
+| Telegram, Slack, email, WhatsApp, SMS, relay
+| <code>adk home serve</code> in [[Company Brain/awdk|awdk]]
+| Every channel whose credentials are in the environment; <code>adk home channels</code> lists them
+|-
+| Email
+| <code>awmail</code>
+| An address for an agent: send and receive over your own server
+|-
+| Desktop
+| <code>awdesk</code>
+| Tray icon and decision cards
+|}
+
+Pair another channel by sending <code>pair &lt;channel&gt;</code> from one that is already paired.
+
+<span id="choosing-between-discord-paths"></span>
+== Choosing between Discord paths ==
+
+<code>awdiscord</code> is the full Discord product. <code>adk home serve</code> is the lighter way to reach ''your own'' agent from many channels. They are different tools for different jobs; a wiki page like this is where that distinction belongs, in one sentence, rather than being inferred from two READMEs.
+
+[[Category:Company Brain]]

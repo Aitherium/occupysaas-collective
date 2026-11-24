@@ -1,0 +1,39 @@
+Proposed modules, with the existing page each should build on. Nothing here is written as a course yet.
+
+{| class="wikitable"
+|-
+! Module
+! Learner leaves able to
+! Build on
+|-
+| 1. The clean-room method
+| Explain the firewall and say what is allowed in
+| [[Rules of the road]], [[How we develop]]
+|-
+| 2. Reading a public spec
+| Turn public API docs and RFCs into a testable statement
+| TODO: needs an example spec to teach from
+|-
+| 3. Running the compatibility laboratory
+| Run a project’s lab against a real SDK
+| [[ZeroAuthy]], [[SalesCompel]]
+|-
+| 4. Contributing your first change
+| Open a pull request that follows the policy
+| [[Contributing to a project]]
+|-
+| 5. Building with AI agents
+| Run a spec-to-code loop with human review
+| [[Aither World]]
+|-
+| 6. Business on the commons
+| Understand funding and business setup options
+| [[Business resources]]
+|}
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: format (self-paced pages, live sessions, recorded video) and a first module to write.
+
+[[Category:Academy]]

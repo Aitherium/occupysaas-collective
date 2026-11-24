@@ -1,0 +1,6 @@
+* [[Welcome and onboarding]]: your first afternoon
+* [[How we develop]]: the clean-room method, step by step
+* [[Contributing to a project]]: from issue to merged change
+* [[Tools and services]]: what we use and who to ask
+
+[[Category:Engineering]]

@@ -1,0 +1,59 @@
+This wiki runs on MediaWiki, hosted by Miraheze. Once it is live, editing happens on the wiki itself.
+
+<span id="edit-a-page"></span>
+== Edit a page ==
+
+# Log in, open the page and choose '''Edit''' (or '''Edit source''').
+# Make your change, add a short summary of what you changed, and save.
+# Check the result and fix it if the layout broke.
+
+<span id="wikitext-basics"></span>
+== Wikitext basics ==
+
+{| class="wikitable"
+|-
+! You want
+! Type
+|-
+| A link to another page
+| <code><nowiki>[[Page title]]</nowiki></code> or <code><nowiki>[[Page title|link text]]</nowiki></code>
+|-
+| A link to another site
+| <code>[https://example.com link text]</code>
+|-
+| A heading
+| <code>== Heading ==</code> (use <code>===</code> for a subheading)
+|-
+| A bullet
+| <code>* item</code>
+|-
+| A numbered item
+| <code># item</code>
+|-
+| Bold, italic
+| <code>'''bold'''</code>, <code>''italic''</code>
+|-
+| Put a page in a category
+| <code><nowiki>[[Category:About]]</nowiki></code> at the bottom
+|-
+| An image
+| <code><nowiki>[[File:Name.png|thumb|Caption]]</nowiki></code>
+|}
+
+<span id="creating-a-page"></span>
+== Creating a page ==
+
+Search for the title. If it does not exist, follow the “create this page” link, then link to it from a landing page so people can find it. See [[Where things go]].
+
+<span id="naming"></span>
+== Naming ==
+
+* Page titles use sentence case (“How to edit”, not “How To Edit”).
+* Pages in the Company Brain set are prefixed “Company Brain/”.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: who may edit (open signup or invite only), and whether any pages are protected.
+
+[[Category:Wiki help]]

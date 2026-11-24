@@ -1,0 +1,54 @@
+[[Company Brain]] › Glossary
+
+{| class="wikitable"
+|-
+! Term
+! Meaning
+! See
+|-
+| '''Brick'''
+| One of the small, single-purpose <code>aw*</code> tools; each installs on its own
+| [[Company Brain|Home]]
+|-
+| '''Operator'''
+| A Discord user id allowed to press approval buttons
+| [[Company Brain/Approvals|Approvals]]
+|-
+| '''Approval card'''
+| Message with Approve / Deny buttons raised before a risky action
+| [[Company Brain/Approvals|Approvals]]
+|-
+| '''Persona'''
+| A named voice for <code>/ask</code>, from a <code>&lt;name&gt;.md</code> file
+| [[Company Brain/awdiscord configuration variables|Configuration]]
+|-
+| '''Plugin'''
+| A set of slash commands each server enables for itself
+| [[Company Brain/Plugins and packs|Plugins and packs]]
+|-
+| '''Pack'''
+| An installable bundle: a plugin pack, or an agent pack (prompt + skills) that becomes a plugin
+| [[Company Brain/Plugins and packs|Plugins and packs]]
+|-
+| '''Home guild'''
+| The Discord server the bot’s owner runs, always served
+| [[Company Brain/Safety rails|Safety rails]]
+|-
+| '''BYO model'''
+| A server running on its own OpenAI-compatible endpoint
+| [[Company Brain/Bring your own model|Bring your own model]]
+|-
+| '''Harvest'''
+| Turning notes into a linked-Markdown wiki
+| [[Company Brain/awbrain|awbrain]]
+|-
+| '''Top-k'''
+| Retrieval of only the best k pages, never the whole history
+| [[Company Brain/awbrain|awbrain]]
+|-
+| '''Receipt'''
+| Output of <code>awbrain status</code>: sources, pages, claims, embedder mode
+| [[Company Brain/adk and awbrain command reference|CLI reference]]
+|}
+
+[[Category:Company Brain]]

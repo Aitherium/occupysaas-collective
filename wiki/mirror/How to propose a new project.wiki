@@ -1,0 +1,43 @@
+Every category on the [[Projects|occupation map]] is open for discussion. Bring a spec, a use case, or a grudge.
+
+<span id="how"></span>
+== How ==
+
+# Check the [[Projects|map]] and the open issues to see whether the target is already proposed.
+# [https://github.com/occupysaas/website/issues/new?title=Target%20proposal%3A%20 Open a target proposal issue] on the website repository, with the title starting “Target proposal:”.
+# Answer the questions below in the issue.
+# Discuss it in the issue and on [https://discord.gg/jZYA3r27tG Discord]. Targets are picked in public.
+
+<span id="what-to-include"></span>
+== What to include ==
+
+{| class="wikitable"
+|-
+! Question
+! Why it matters
+|-
+| Which product or category, and who pays per seat today?
+| Shows the pain and the audience
+|-
+| What public documentation, standards and RFCs describe its interfaces?
+| A clean room needs enough public material to write a spec
+|-
+| Which public client SDKs and CLIs could be tested against our server?
+| Compatibility tests decide what counts as done
+|-
+| Is there a drop-in story: which existing code should work unchanged?
+| Defines the scope
+|-
+| Are you free of confidential knowledge about the product?
+| See [[Rules of the road]]
+|-
+| Who would use it, and who would help build it?
+| A project needs people
+|}
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: how proposals are accepted (who decides, quorum, timeline). Once settled, record it on [[Roles]] and in the [[Decision log]].
+
+[[Category:Projects]]

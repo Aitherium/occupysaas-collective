@@ -1,0 +1,33 @@
+A draft; change it by consensus.
+
+<span id="voice"></span>
+== Voice ==
+
+* Plain and direct. The movement voice belongs in [[About]] and [[Communications]]; reference and how-to pages stay neutral.
+* Address the reader as “you” and the collective as “we”.
+
+<span id="claims"></span>
+== Claims ==
+
+* Say what is '''shipped''' and what is '''planned'''. Never describe planned work as working.
+* Date anything that changes (“as of 23 November 2026”), and link to the source of truth, usually a project README.
+* Do not call a project production-ready, certified or 1:1 compatible unless its own README says so.
+* Use vendor names only to describe compatibility. Do not imply affiliation.
+
+<span id="formatting"></span>
+== Formatting ==
+
+* Sentence-case headings and page titles.
+* Start each page with a sentence saying what it is. Put the most useful content first.
+* Use tables for comparisons and short lists for steps.
+* Link the first mention of a concept on a page.
+* Link to the landing page of the section the page belongs to.
+* Mark a gap with <code>TODO: needs input from &lt;who&gt;</code>, and keep the list of open items at the bottom of the page.
+
+<span id="sources-and-provenance"></span>
+== Sources and provenance ==
+
+* Cite where a fact came from (README, website page, standards document).
+* For anything about a vendor’s product, only use public sources. See [[Rules of the road]].
+
+[[Category:Wiki help]]

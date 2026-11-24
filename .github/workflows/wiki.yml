@@ -1,0 +1,61 @@
+name: Wiki
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["docs/**", "wiki/publish.json", "scripts/wiki_sync.py"]
+  pull_request:
+    paths: ["docs/**", "wiki/**", "scripts/wiki_sync.py", "scripts/test_wiki_sync.py"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m unittest discover -s scripts -p "test_*.py"
+
+  publish:
+    # repo -> wiki. Dry run unless the bot secrets exist and this is a push to main.
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y --no-install-recommends pandoc
+      - name: Publish
+        env:
+          WIKI_BOT_USER: ${{ secrets.WIKI_BOT_USER }}
+          WIKI_BOT_PASSWORD: ${{ secrets.WIKI_BOT_PASSWORD }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          args=""
+          if [ "$EVENT" = "push" ] && [ -n "$WIKI_BOT_PASSWORD" ]; then args="--apply"; fi
+          rc=0; python3 scripts/wiki_sync.py publish $args || rc=$?
+          if [ "$rc" = 2 ]; then
+            echo "::warning::the wiki refused this runner (403); publish runs from the collective's own host"
+            exit 0
+          fi
+          exit "$rc"
+
+  mirror:
+    # wiki -> repo. Miraheze answers 403 to GitHub-hosted runners, so the daily mirror
+    # runs on the collective's own host (scripts/wiki_mirror_pr.sh); this job is the
+    # manual fallback and reports a 403 as a warning, not a pass.
+    if: github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - name: Mirror and open the pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rc=0; bash scripts/wiki_mirror_pr.sh || rc=$?
+          if [ "$rc" = 2 ]; then echo "::warning::the wiki refused this runner (403)"; exit 0; fi
+          exit "$rc"

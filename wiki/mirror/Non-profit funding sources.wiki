@@ -1,0 +1,37 @@
+Check that a funder is still active before spending research time: funders close, change scope and move deadlines. Details below were last checked in August 2026 and may be out of date.
+
+<span id="open-source-and-public-interest-technology-funders"></span>
+== Open source and public-interest technology funders ==
+
+{| class="wikitable"
+|-
+! Funder
+! Notes
+|-
+| NLnet Foundation
+| European fund for open internet technology. A first proposal is capped at EUR 50,000, and its eligibility page states no categorical exclusions of persons or entities and no geographical restrictions, so a legal entity or sponsor was not required. Scope leans toward core internet and protocol infrastructure and general FOSS engineering. Calls have fixed deadlines; confirm which fund is currently open.
+|-
+| Sovereign Tech Fund
+| German fund for open digital infrastructure. Looks for already-built, developer-facing infrastructure rather than prototypes or user-facing applications. Scored criteria include prevalence and expertise.
+|-
+| Mozilla Technology Fund
+| Successor to the defunct MOSS program. Recent cycle themes have been AI-centric; check for an open call.
+|-
+| Media Democracy Fund
+| Thematic fit for digital rights, but does not accept unsolicited applications; a warm referral is needed.
+|}
+
+<span id="how-to-find-more"></span>
+== How to find more ==
+
+* [[Grant-writing help]] lists databases and newsletters.
+* Software Freedom Conservancy and similar organizations act as fiscal sponsors and can receive donations on a project’s behalf. See [[Fiscal sponsorship]].
+
+<span id="tutorials-in-this-section"></span>
+== Tutorials in this section ==
+
+* [[Basic business setup]]
+* [[Fiscal sponsorship]]
+* [[Grant-writing help]]
+
+[[Category:Business resources]]

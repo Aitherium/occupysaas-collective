@@ -27,6 +27,7 @@ records and the shared glossary:
 - [Topics](docs/topics/index.md) -- one page per project, plus how to contribute
 - [Decisions](docs/adr/index.md) -- architecture decision records
 - [Glossary](docs/glossary.md) -- shared vocabulary
+- [The wiki](https://occupysaas.miraheze.org/) -- where people browse and edit; [wiki/README.md](wiki/README.md) says how it and this repository stay in step
 
 ## Get it working
 

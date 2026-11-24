@@ -1,0 +1,50 @@
+A first-pass checklist, US-oriented. Rules differ by country and state; ask a local accountant or lawyer before you commit.
+
+<span id="choose-how-you-will-operate"></span>
+== 1. Choose how you will operate ==
+
+{| class="wikitable"
+|-
+! Option
+! Good for
+! Watch for
+|-
+| Informal collective or sole proprietor
+| Volunteer work, no money moving
+| Personal liability; cannot easily receive grants; no tax deductibility for donors
+|-
+| LLC or similar company
+| Selling services or products around the commons
+| You pay tax on profit; does not make donations tax-deductible
+|-
+| Non-profit corporation, then tax-exempt status
+| A funded organization in its own right
+| Set-up cost, annual filings, governance rules, months of waiting for approval
+|-
+| Project of a fiscal sponsor
+| Taking grants and deductible donations without your own entity
+| A fee, and the sponsor’s rules; see [[Fiscal sponsorship]]
+|}
+
+<span id="get-the-basics-in-place"></span>
+== 2. Get the basics in place ==
+
+* A legal name and a registered entity if you chose one
+* A tax ID (in the US, an EIN from the IRS, which is free)
+* A separate bank account, never your personal one
+* Simple bookkeeping from day one: every receipt and every payment categorized
+* A written record of who decided what (the [[Decision log]] is a start)
+
+<span id="protect-the-open-source-commons"></span>
+== 3. Protect the open source commons ==
+
+* Keep the licence on your forks and respect each project’s contribution policy.
+* Do not use vendor names or logos as your own branding. Names may be used only to describe compatibility.
+* Keep your work inside the clean-room rules (see [[Rules of the road]]).
+
+<span id="next"></span>
+== Next ==
+
+[[Funding]], [[Fiscal sponsorship]].
+
+[[Category:Business resources]]

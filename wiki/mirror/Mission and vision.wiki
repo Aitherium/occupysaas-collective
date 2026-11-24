@@ -1,0 +1,40 @@
+<span id="mission"></span>
+== Mission ==
+
+Build open-source, drop-in replacements for the software platforms that charge by the seat, and give them away under the Apache License 2.0. Each project is rebuilt from public documentation and open standards, then proven compatible against the vendor’s own public client SDKs.
+
+<span id="the-grievances"></span>
+== The grievances ==
+
+The software built by the 99% belongs to the 99%. In 2011, Occupy Wall Street asked who the economy was really working for. In 2026 we ask the same question about the cloud.
+
+* '''Per-seat pricing is a tax on growth.''' Every hire, intern and contractor is another line item. Infrastructure should not charge rent by the head.
+* '''Lock-in is not a feature.''' Proprietary APIs, export walls and surprise price hikes keep customers captive. Compatible open alternatives set them free.
+* '''They cut us. We commit.''' A million engineers were let go while the platforms kept growing. We still know how to ship, and now we ship in the open.
+
+<span id="vision"></span>
+== Vision ==
+
+Your code, your data, your servers. No seats to count, no renewals to dread, and nobody who can switch it off but you. Our motto: ''You will own everything and be happy!''
+
+<span id="lineage"></span>
+== Lineage ==
+
+Occupy Wall Street began on 17 September 2011 in Zuccotti Park, New York City, with a simple frame: the 1% and the 99%. It had no leaders, made decisions in open assemblies, and spread to hundreds of cities. OccupySaaS borrows that spirit and swaps tents for terminals: no marches and no property damage, just working software published under an open licence that anyone can run.
+
+<span id="how-we-work"></span>
+== How we work ==
+
+See [[How we develop]] for the five-step clean-room method, and [[Rules of the road]] for the rules that keep it clean.
+
+<span id="where-we-are"></span>
+== Where we are ==
+
+Two projects are public: [[ZeroAuthy]] (identity) and [[SalesCompel]] (CRM). Both are early. Neither claims to be production-ready.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: a longer vision statement (3 to 5 years out) and any explicit non-goals.
+
+[[Category:About]]
