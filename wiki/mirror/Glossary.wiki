@@ -1,0 +1,39 @@
+Terms used across the collective. Terms specific to the Company Brain tools are on [[Company Brain/Glossary]].
+
+{| class="wikitable"
+|-
+! Term
+! Meaning
+|-
+| '''Clean room'''
+| Building compatible software only from public information, with the people who write the spec kept apart from the people who write the code
+|-
+| '''Firewall'''
+| The separation between spec writers and builders
+|-
+| '''Drop-in'''
+| Works with existing client code or SDKs without changes
+|-
+| '''Compatibility laboratory'''
+| A test setup that runs the vendors’ own public client SDKs against our server
+|-
+| '''Provenance'''
+| The recorded source of each fixture, reference or spec statement
+|-
+| '''Per-seat tax'''
+| Pricing that charges for each user rather than for the infrastructure used
+|-
+| '''Occupied / Proposed'''
+| Status of a target category on the occupation map: a project exists, or it has been suggested (see [[Projects]])
+|-
+| '''Release candidate (RC)'''
+| A build offered for wide testing before a final release, for example ZeroAuthy v1.0.0-rc.1
+|-
+| '''OpenID Certified'''
+| Certification by the OpenID Foundation that an implementation passes the conformance suite for given profiles
+|-
+| '''Target'''
+| A SaaS category or product we propose to replace
+|}
+
+[[Category:About]]

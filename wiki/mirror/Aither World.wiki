@@ -1,0 +1,7 @@
+Aither World is our development engine: the tooling that lets AI agents turn a written specification into working code under human review.
+
+* [[What Aither World is]]
+* [[Setting up Aither World]]
+* Documentation for the building blocks is in [[Company Brain]], where each tool has its own page.
+
+[[Category:Aither World]]

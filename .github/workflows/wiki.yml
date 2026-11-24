@@ -1,0 +1,66 @@
+name: Wiki
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # daily mirror, wiki -> repo
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["docs/**", "wiki/publish.json", "scripts/wiki_sync.py"]
+  pull_request:
+    paths: ["docs/**", "wiki/**", "scripts/wiki_sync.py", "scripts/test_wiki_sync.py"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m unittest discover -s scripts -p "test_*.py"
+
+  publish:
+    # repo -> wiki. Dry run unless the bot secrets exist and this is a push to main.
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y --no-install-recommends pandoc
+      - name: Publish
+        env:
+          WIKI_BOT_USER: ${{ secrets.WIKI_BOT_USER }}
+          WIKI_BOT_PASSWORD: ${{ secrets.WIKI_BOT_PASSWORD }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT" = "push" ] && [ -n "$WIKI_BOT_PASSWORD" ]; then
+            python3 scripts/wiki_sync.py publish --apply
+          else
+            python3 scripts/wiki_sync.py publish
+          fi
+
+  mirror:
+    # wiki -> repo, as a pull request so every wiki change is reviewable here.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/wiki_sync.py mirror
+      - name: Open or update the mirror pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git add -A wiki/mirror
+          if git diff --cached --quiet; then echo "wiki unchanged"; exit 0; fi
+          git config user.name "wiki-mirror"
+          git config user.email "wiki-mirror@users.noreply.github.com"
+          git fetch origin wiki-mirror || true
+          git checkout -B wiki-mirror
+          git commit -q -m "wiki: mirror pages from occupysaas.miraheze.org"
+          git push --force-with-lease origin wiki-mirror
+          gh pr view wiki-mirror >/dev/null 2>&1 || gh pr create --head wiki-mirror --base main \
+            --title "wiki: mirror pages from the wiki" \
+            --body "Daily copy of https://occupysaas.miraheze.org/ (scripts/wiki_sync.py mirror). Review the diff to see what changed on the wiki."

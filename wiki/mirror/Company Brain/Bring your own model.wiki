@@ -1,0 +1,56 @@
+[[Company Brain]] › Concepts › Bring your own model
+
+A bot you publish answers with ''your'' inference, so a stranger who installs it must not be able to spend it. [[Company Brain/awdiscord|awdiscord]] therefore decides, per server, whose model answers.
+
+<span id="the-three-outcomes"></span>
+== The three outcomes ==
+
+{| class="wikitable"
+|-
+! Resolves to
+! Meaning
+|-
+| <code>owner</code>
+| The bot’s configured agent answers
+|-
+| <code>byo</code>
+| The server’s own endpoint answers
+|-
+| <code>none</code>
+| Nothing answers here; the server gets a card explaining how to set up
+|}
+
+<span id="model-needs-manage-server"></span>
+== <code>/model</code> (needs Manage Server) ==
+
+{| class="wikitable"
+|-
+! Subcommand
+! Effect
+|-
+| <code>setup</code>
+| Opens a modal for endpoint, model, API key and optional vision models. The endpoint must pass a health check before anything is saved
+|-
+| <code>test</code>
+| Re-checks the endpoint
+|-
+| <code>status</code>
+| Shows what answers; the key appears only as a 12-character fingerprint
+|-
+| <code>off</code>
+| Deletes the key and returns to the bot’s default model
+|}
+
+<code>/selfhost</code> is an admin-only wizard from “no model” to a server’s own endpoint, then hands off to <code>/model setup</code>.
+
+<span id="works-with"></span>
+== Works with ==
+
+llama.cpp, Ollama, LM Studio, vLLM, or a hosted API, as long as it is OpenAI-compatible.
+
+<span id="related"></span>
+== Related ==
+
+[[Company Brain/Safety rails|Safety rails]] · [[Company Brain/awdiscord configuration variables|Configuration]] · [[Company Brain/Discord command reference|Discord commands]]
+
+[[Category:Company Brain]]

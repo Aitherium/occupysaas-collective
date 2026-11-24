@@ -1,0 +1,9 @@
+OccupySaaS is a collective of laid-off engineers building open-source, clean-room replacements for commercial SaaS platforms.
+
+* [[Mission and vision]]: why we exist and what we are aiming for
+* [[Elevator pitch]]: the movement in 10 seconds, 30 seconds and a paragraph
+* [[Rules of the road]]: the rules every contributor works under
+* [[How we are organized]]: groups, roles and who decides what
+* [[Glossary]]: terms we use
+
+[[Category:About]]

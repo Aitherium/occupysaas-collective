@@ -1,0 +1,7 @@
+{
+  "_comment": "Markdown files in this repo that are published to the wiki. Only listed pages are touched. A page last edited by a person on the wiki is refused, never overwritten, unless --force.",
+  "pages": [
+    {"source": "docs/adr/0001-record-architecture-decisions.md", "title": "Decision log/ADR 0001: record architecture decisions"},
+    {"source": "docs/adr/0002-umbrella-as-submodules.md", "title": "Decision log/ADR 0002: the umbrella holds members as git submodules"}
+  ]
+}

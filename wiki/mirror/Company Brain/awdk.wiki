@@ -1,0 +1,48 @@
+[[Company Brain]] › Bricks › awdk
+
+<blockquote>'''Build AI agent fleets — 3 lines, any backend, local or cloud.'''
+</blockquote>
+{| class="wikitable"
+|-
+| '''Category'''
+| Core
+|-
+| '''Install'''
+| <code>pip install awdk</code> (or <code>uv tool install awdk</code> for the CLI)
+|-
+| '''Licence'''
+| BSL 1.1
+|-
+| '''Source'''
+| https://github.com/Aitherium/awdk
+|-
+| '''Python'''
+| 3.10 or later
+|-
+| '''Status'''
+| Installed and listed by <code>uv</code>; commands below from the README
+|}
+
+<span id="what-it-is"></span>
+== What it is ==
+
+A Python SDK and CLI for agents that run on your hardware: a single agent or a fleet that delegates. Agents get tools, persistent knowledge-graph memory, safety filtering and effort-based model routing.
+
+<span id="executables-installed"></span>
+== Executables installed ==
+
+<code>adk</code>, <code>adk-awdelegate</code>, <code>adk-bug</code>, <code>adk-py</code>, <code>adk-serve</code>, <code>adk-shell</code>, <code>adk-workspace</code>, <code>aither-adk</code>, <code>aither-hearth</code>, <code>awdk</code>. Command details: [[Company Brain/adk and awbrain command reference#adk|CLI reference]].
+
+<span id="quick-start"></span>
+== Quick start ==
+
+<syntaxhighlight lang="bash">adk quickstart                        # detects hardware, pulls models, configures backends
+adk init my-agent && cd my-agent && python agent.py</syntaxhighlight>
+<span id="where-it-meets-the-other-bricks"></span>
+== Where it meets the other bricks ==
+
+* '''Discord:''' an <code>adk serve</code> agent is a valid back end for [[Company Brain/awdiscord|awdiscord]]. <code>adk home serve</code> can also answer on Telegram, Discord, Slack, email, WhatsApp and SMS; see [[Company Brain/Channels|Channels]].
+* '''Memory:''' [[Company Brain/awbrain|awbrain]] supplies the knowledge the agent answers from.
+* '''Safety:''' [[Company Brain/Approvals|Approvals]] gate anything that spends, deletes or publishes.
+
+[[Category:Company Brain]]

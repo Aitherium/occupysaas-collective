@@ -1,0 +1,10 @@
+Training for new members, so that someone with a laptop and an afternoon can become useful.
+
+* [[Training content]]: the curriculum outline and what exists today
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: who the Academy is for first (laid-off engineers, non-engineers, business owners) and who maintains it.
+
+[[Category:Academy]]

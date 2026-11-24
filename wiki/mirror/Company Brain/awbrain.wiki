@@ -1,0 +1,46 @@
+[[Company Brain]] › Bricks › awbrain
+
+<blockquote>'''Your history as a wiki of linked markdown — every claim pinned to the file and line that produced it.'''
+</blockquote>
+{| class="wikitable"
+|-
+| '''Category'''
+| [[Company Brain/Memory and knowledge|Memory and knowledge]]
+|-
+| '''Install'''
+| <code>pip install awbrain</code>
+|-
+| '''Licence'''
+| MIT
+|-
+| '''Source'''
+| https://github.com/Aitherium/awbrain
+|-
+| '''Status'''
+| Documented in its README; not yet run by the collective
+|}
+
+<span id="what-it-is"></span>
+== What it is ==
+
+A folder of linked Markdown you can open in any editor: no proprietary blob, no vendor cloud. It harvests notes and sessions into a wiki, answers questions from only the top-k pages, and walks any claim back to its source line.
+
+<span id="commands"></span>
+== Commands ==
+
+<code>harvest</code>, <code>ask</code>, <code>verify</code>, <code>watch</code>, <code>status</code>. Examples and meanings: [[Company Brain/adk and awbrain command reference#awbrain|CLI reference]].
+
+<span id="how-it-works"></span>
+== How it works ==
+
+* <code>harvest</code> writes pages with <code><nowiki>[[wikilinks]]</nowiki></code>, each claim pinned to a source file and line span.
+* <code>ask</code> retrieves top-k pages plus a two-hop wikilink expansion, then answers with <code><nowiki>[[citation]]</nowiki></code> markers.
+* <code>verify</code> finds the supporting line, or says it cannot.
+* Embeddings come from a router (nomic-embed-text) when reachable, otherwise a lexical fallback. The manifest records which mode ran, so retrieval is never overstated.
+
+<span id="composes-with"></span>
+== Composes with ==
+
+<code>awgraph</code> (the wikilinks are a graph), <code>awm</code> (claims as scoped memory), <code>awseal</code> (failures as “what not to do” claims). Used in Discord via [[Company Brain/awdiscord|awdiscord]]; the supported wiring is still an open question; the [[Company Brain/Guide: setting up your company brain in Discord|setup guide]] marks that step as a proposal.
+
+[[Category:Company Brain]]

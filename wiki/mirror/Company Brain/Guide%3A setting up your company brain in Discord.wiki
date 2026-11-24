@@ -1,0 +1,117 @@
+[[Company Brain]] › Guides › Company brain in Discord
+
+{| class="wikitable"
+|-
+| '''Audience'''
+| A small team that wants staff to ask questions in Discord and get answers from the company’s own notes
+|-
+| '''Time'''
+| About an hour, plus however long your notes take to harvest
+|-
+| '''You will use'''
+| [[Company Brain/awbrain|awbrain]], [[Company Brain/awdiscord|awdiscord]], a local model server
+|-
+| '''Status'''
+| Steps 1–3 and 5 follow the vendor READMEs. Step 4 (connecting the two) is a '''design proposal, not yet tested'''
+|}
+
+<span id="the-picture"></span>
+== The picture ==
+
+<pre> your notes ──awbrain harvest──▶ linked-Markdown wiki
+                                        │  (top-k pages only)
+ Discord ◀──slash commands──▶ awdiscord ──▶ agent (OpenAI-compatible endpoint)
+                                   │
+                          operators approve risky actions</pre>
+Everything runs on your machine and your model. No vendor cloud sits in the middle, which is the point of the [[Company Brain/Memory and knowledge|aw family]].
+
+<span id="before-you-start"></span>
+== Before you start ==
+
+* Python 3.10 or later
+* A model server on the same machine: Ollama, llama.cpp, vLLM or LM Studio. [[Company Brain/awdiscord#Setup|awdiscord setup]] finds it for you.
+* A Discord account that can create an application
+* A folder of Markdown notes or session exports
+
+<span id="step-1-build-the-brain"></span>
+== Step 1 — Build the brain ==
+
+<syntaxhighlight lang="bash">pip install awbrain
+awbrain harvest ~/notes
+awbrain ask "what did we decide about the pool?"
+awbrain verify "a self-owned platform beats a subscription computer"</syntaxhighlight>
+<code>harvest</code> writes a wiki of pages joined by <code><nowiki>[[wikilinks]]</nowiki></code>; every claim is pinned to the file and line it came from. <code>ask</code> answers from the top-k pages only, never your whole history. Full commands: [[Company Brain/adk and awbrain command reference#awbrain|CLI reference]].
+
+<span id="step-2-create-the-discord-application"></span>
+== Step 2 — Create the Discord application ==
+
+Discord does not allow this step from an API, so do it by hand:
+
+# Open https://discord.com/developers/applications and create an application.
+# Open '''Bot''' and press '''Reset Token'''. Copy the token; you paste it once in step 3.
+
+<span id="step-3-install-and-run-the-bot"></span>
+== Step 3 — Install and run the bot ==
+
+<syntaxhighlight lang="bash">pip install "awdiscord[gateway]"
+awdiscord setup     # paste the token; it does the rest
+awdiscord run</syntaxhighlight>
+<code>setup</code> checks it is a bot token, finds your model server, makes you the operator, saves settings to <code>~/.awdiscord/awdiscord.env</code> (mode 600), registers the slash commands and prints the install link. Open the link to add the bot to your server. See [[Company Brain/Safety rails|Safety rails]] for what permissions it asks for (four, and no more).
+
+<span id="step-4-connect-the-brain-to-the-bot-design-proposal"></span>
+== Step 4 — Connect the brain to the bot ''(design proposal)'' ==
+
+<blockquote>'''Not verified.''' Neither README documents this link. Two plausible routes, to be tested:
+
+# Run an <code>adk serve</code> agent whose tool calls <code>awbrain ask</code>, and point <code>AWDISCORD_AGENT_URL</code> at it.
+# Write an [[Company Brain/Plugins and packs|awdiscord plugin]] whose command shells out to <code>awbrain ask</code> and posts the cited answer.
+
+Either way, <code>/ask</code> or a new <code>/brain</code> command would return an answer with <code><nowiki>[[citation]]</nowiki></code> markers. This is the page a friendly vendor could fill in with the supported route.
+</blockquote>
+<span id="step-5-what-staff-can-now-do"></span>
+== Step 5 — What staff can now do ==
+
+{| class="wikitable"
+|-
+! Command
+! What it does
+|-
+| <code>/ask question</code>
+| The agent answers. Add <code>private</code> to show only you
+|-
+| <code>/share</code>
+| Post your last answer to the channel
+|-
+| <code>/faq ask</code>
+| Answer from a curated FAQ only
+|-
+| <code>/task add</code> and <code>/standup</code>
+| Track work; the agent writes a standup from the board
+|-
+| <code>/poll</code>
+| Quick votes with buttons
+|-
+| <code>/status</code>
+| Is the agent up, which personas exist
+|}
+
+Operators also get [[Company Brain/Approvals|Approve/Deny cards]] for risky actions. Full list: [[Company Brain/Discord command reference|Discord command reference]].
+
+<span id="voice-calls"></span>
+=== Voice calls ===
+
+With voice enabled, the bot joins a voice channel, takes notes when someone says “Aither, take notes”, and posts a summary and action items at the end. Items that would spend money, delete data or publish outside the organisation are marked '''needs a decision, not done'''.
+
+<span id="keeping-the-brain-fresh"></span>
+== Keeping the brain fresh ==
+
+<syntaxhighlight lang="bash">awbrain watch ~/notes     # re-harvests changed sources
+awbrain status            # receipts: sources, pages, claims, embedder mode</syntaxhighlight>
+<span id="next"></span>
+== Next ==
+
+* Give each server its own model: [[Company Brain/Bring your own model|Bring your own model]]
+* Add behaviour: [[Company Brain/Plugins and packs|Plugins and packs]]
+* Lock down who can approve: [[Company Brain/Approvals|Approvals]]
+
+[[Category:Company Brain]]

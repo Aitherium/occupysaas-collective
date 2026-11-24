@@ -1,0 +1,50 @@
+Clean room. AI rebuild. Drop-in. Every project follows the same five steps.
+
+# '''Read the public record.''' Public API references, open standards (OAuth 2.0, OIDC, REST) and published SDK behaviour become a written specification. Nothing confidential, nothing leaked, nothing from former employers.
+# '''Raise the firewall.''' Spec writers and builders stay separated. Each repo carries a <code>CLEAN_ROOM.md</code> policy, and provenance is recorded for every fixture and reference.
+# '''Rebuild with AI.''' AI agents implement from the spec alone: contracts first (<code>openapi.yaml</code>), then code, then tests, under human review at every merge. See [[Aither World]].
+# '''Prove compatibility.''' A compatibility laboratory runs the vendors’ own public client SDKs against our server. If your existing code does not work unchanged, it is not done.
+# '''Release it to everyone.''' Apache-2.0, self-hostable, pluggable storage, no telemetry you did not ask for, and no seat counter.
+
+<span id="stack-of-the-first-projects"></span>
+== Stack of the first projects ==
+
+Go servers (a single self-contained binary, easy to self-host in a container), Vue and TypeScript front ends, PostgreSQL and other storage back ends. Specs, API contracts and compatibility tests are language-neutral, so ports to other languages can be checked against the same SDKs.
+
+<span id="commands-in-zeroauthy"></span>
+== Commands in ZeroAuthy ==
+
+From the README (Make targets; check upstream for current ones):
+
+{| class="wikitable"
+|-
+! Command
+! Purpose
+|-
+| <code>make test</code>
+| Unit, contract and storage conformance tests
+|-
+| <code>make test-sql</code>
+| SQL driver tests against PostgreSQL and MySQL containers
+|-
+| <code>make generate</code>
+| Regenerate code from the API specs
+|-
+| <code>make e2e</code>
+| Auth0 SDKs against a live ZeroAuthy
+|-
+| <code>make conformance</code>
+| OpenID conformance suite (Linux, podman or docker; roughly 10 to 20 minutes)
+|}
+
+<span id="releases"></span>
+== Releases ==
+
+Releases are manual: a tagged commit pushed to the <code>release</code> branch, then a maintainer’s approval in GitHub Actions. Each repo’s <code>RELEASING.md</code> has the checklist.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: the common review rules across repos (required reviewers, test gates) and how AI-written changes are labeled.
+
+[[Category:Engineering]]

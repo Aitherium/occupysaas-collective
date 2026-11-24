@@ -1,0 +1,51 @@
+Record decisions here so they are findable later. Each entry: what was decided, why, and who was part of it. Entries below were backfilled from occupysaas.com and the project READMEs; their dates and decision makers are not recorded.
+
+{| class="wikitable"
+|-
+! Decision
+! Why
+! Source
+! Date
+|-
+| License every project under Apache-2.0
+| Anyone can run, fork and sell services around it
+| occupysaas.com
+| TODO
+|-
+| Use clean-room method and publish <code>CLEAN_ROOM.md</code> per repo
+| Anyone can check the work, and it keeps contributors safe
+| occupysaas.com
+| TODO
+|-
+| Build the first projects in Go
+| One self-contained binary, easy to self-host in a container
+| occupysaas.com (FAQ)
+| TODO
+|-
+| Run two fundraisers (GoFundMe and GiveSendGo)
+| Some people will not use one platform or the other
+| occupysaas.com
+| TODO
+|-
+| Choose targets in public
+| Follows Occupy-style open assemblies
+| occupysaas.com
+| TODO
+|-
+| Release ZeroAuthy v1.0.0-rc.1 as an early preview, not production-ready
+| Honest scope: the compatibility matrix lists the gaps
+| occupysaas.com, README
+| 2026-11-04
+|}
+
+<span id="how-to-add-an-entry"></span>
+== How to add an entry ==
+
+Add a row at the bottom. Link to the discussion (issue, Discord thread) when there is one.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: dates and decision makers for the backfilled entries, and the rule for what counts as a decision worth logging.
+
+[[Category:Governance and decisions]]

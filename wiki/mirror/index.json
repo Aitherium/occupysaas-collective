@@ -1,0 +1,332 @@
+{
+ "About": {
+  "file": "wiki/mirror/About.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:32Z"
+ },
+ "Academy": {
+  "file": "wiki/mirror/Academy.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:34Z"
+ },
+ "Aither World": {
+  "file": "wiki/mirror/Aither World.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:34Z"
+ },
+ "Basic business setup": {
+  "file": "wiki/mirror/Basic business setup.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Business resources": {
+  "file": "wiki/mirror/Business resources.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Category:About": {
+  "file": "wiki/mirror/Category%3AAbout.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Category:Academy": {
+  "file": "wiki/mirror/Category%3AAcademy.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Category:Aither World": {
+  "file": "wiki/mirror/Category%3AAither World.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Category:Business resources": {
+  "file": "wiki/mirror/Category%3ABusiness resources.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Category:Communications": {
+  "file": "wiki/mirror/Category%3ACommunications.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Category:Company Brain": {
+  "file": "wiki/mirror/Category%3ACompany Brain.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Category:Domains": {
+  "file": "wiki/mirror/Category%3ADomains.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Category:Engineering": {
+  "file": "wiki/mirror/Category%3AEngineering.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:37Z"
+ },
+ "Category:Governance and decisions": {
+  "file": "wiki/mirror/Category%3AGovernance and decisions.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:37Z"
+ },
+ "Category:Projects": {
+  "file": "wiki/mirror/Category%3AProjects.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:37Z"
+ },
+ "Category:Wiki help": {
+  "file": "wiki/mirror/Category%3AWiki help.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:37Z"
+ },
+ "Communications": {
+  "file": "wiki/mirror/Communications.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:37Z"
+ },
+ "Company Brain": {
+  "file": "wiki/mirror/Company Brain.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:39Z"
+ },
+ "Company Brain/Approvals": {
+  "file": "wiki/mirror/Company Brain/Approvals.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:38Z"
+ },
+ "Company Brain/Bring your own model": {
+  "file": "wiki/mirror/Company Brain/Bring your own model.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:38Z"
+ },
+ "Company Brain/Channels": {
+  "file": "wiki/mirror/Company Brain/Channels.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:38Z"
+ },
+ "Company Brain/Discord command reference": {
+  "file": "wiki/mirror/Company Brain/Discord command reference.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:40Z"
+ },
+ "Company Brain/Glossary": {
+  "file": "wiki/mirror/Company Brain/Glossary.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:39Z"
+ },
+ "Company Brain/Guide: setting up your company brain in Discord": {
+  "file": "wiki/mirror/Company Brain/Guide%3A setting up your company brain in Discord.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:39Z"
+ },
+ "Company Brain/Memory and knowledge": {
+  "file": "wiki/mirror/Company Brain/Memory and knowledge.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:38Z"
+ },
+ "Company Brain/Plugins and packs": {
+  "file": "wiki/mirror/Company Brain/Plugins and packs.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:39Z"
+ },
+ "Company Brain/Safety and control": {
+  "file": "wiki/mirror/Company Brain/Safety and control.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:38Z"
+ },
+ "Company Brain/Safety rails": {
+  "file": "wiki/mirror/Company Brain/Safety rails.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:39Z"
+ },
+ "Company Brain/adk and awbrain command reference": {
+  "file": "wiki/mirror/Company Brain/adk and awbrain command reference.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:40Z"
+ },
+ "Company Brain/awbrain": {
+  "file": "wiki/mirror/Company Brain/awbrain.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:37Z"
+ },
+ "Company Brain/awdiscord": {
+  "file": "wiki/mirror/Company Brain/awdiscord.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:37Z"
+ },
+ "Company Brain/awdiscord configuration variables": {
+  "file": "wiki/mirror/Company Brain/awdiscord configuration variables.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:40Z"
+ },
+ "Company Brain/awdk": {
+  "file": "wiki/mirror/Company Brain/awdk.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:37Z"
+ },
+ "Contributing to a project": {
+  "file": "wiki/mirror/Contributing to a project.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:40Z"
+ },
+ "Decision log": {
+  "file": "wiki/mirror/Decision log.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:41Z"
+ },
+ "Elevator pitch": {
+  "file": "wiki/mirror/Elevator pitch.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:32Z"
+ },
+ "Engineering": {
+  "file": "wiki/mirror/Engineering.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:41Z"
+ },
+ "Fiscal sponsorship": {
+  "file": "wiki/mirror/Fiscal sponsorship.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "For-profit funding": {
+  "file": "wiki/mirror/For-profit funding.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Funding": {
+  "file": "wiki/mirror/Funding.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Glossary": {
+  "file": "wiki/mirror/Glossary.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:32Z"
+ },
+ "Governance and decisions": {
+  "file": "wiki/mirror/Governance and decisions.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:41Z"
+ },
+ "Grant-writing help": {
+  "file": "wiki/mirror/Grant-writing help.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "How to edit": {
+  "file": "wiki/mirror/How to edit.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:43Z"
+ },
+ "How to join and how to leave": {
+  "file": "wiki/mirror/How to join and how to leave.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:41Z"
+ },
+ "How to propose a new project": {
+  "file": "wiki/mirror/How to propose a new project.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:41Z"
+ },
+ "How we are organized": {
+  "file": "wiki/mirror/How we are organized.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:34Z"
+ },
+ "How we develop": {
+  "file": "wiki/mirror/How we develop.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:41Z"
+ },
+ "Main Page": {
+  "file": "wiki/mirror/Main Page.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:41Z"
+ },
+ "Mission and vision": {
+  "file": "wiki/mirror/Mission and vision.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:32Z"
+ },
+ "Non-profit funding sources": {
+  "file": "wiki/mirror/Non-profit funding sources.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Outbound messaging": {
+  "file": "wiki/mirror/Outbound messaging.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:37Z"
+ },
+ "Outreach: how to describe us to people outside the collective": {
+  "file": "wiki/mirror/Outreach%3A how to describe us to people outside the collective.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:37Z"
+ },
+ "Projects": {
+  "file": "wiki/mirror/Projects.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:42Z"
+ },
+ "Roles": {
+  "file": "wiki/mirror/Roles.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:41Z"
+ },
+ "Rules of the road": {
+  "file": "wiki/mirror/Rules of the road.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:35Z"
+ },
+ "SalesCompel": {
+  "file": "wiki/mirror/SalesCompel.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:43Z"
+ },
+ "Setting up Aither World": {
+  "file": "wiki/mirror/Setting up Aither World.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:34Z"
+ },
+ "Style guide": {
+  "file": "wiki/mirror/Style guide.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:44Z"
+ },
+ "Tools and services": {
+  "file": "wiki/mirror/Tools and services.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:41Z"
+ },
+ "Training content": {
+  "file": "wiki/mirror/Training content.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:34Z"
+ },
+ "Welcome and onboarding": {
+  "file": "wiki/mirror/Welcome and onboarding.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:41Z"
+ },
+ "What Aither World is": {
+  "file": "wiki/mirror/What Aither World is.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:36Z"
+ },
+ "Where things go": {
+  "file": "wiki/mirror/Where things go.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:44Z"
+ },
+ "Wiki help": {
+  "file": "wiki/mirror/Wiki help.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:43Z"
+ },
+ "ZeroAuthy": {
+  "file": "wiki/mirror/ZeroAuthy.wiki",
+  "user": "Chris.b.206",
+  "timestamp": "2026-11-24T03:00:43Z"
+ }
+}

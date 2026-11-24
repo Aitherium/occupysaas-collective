@@ -1,0 +1,31 @@
+[[Company Brain]] › Concepts › Approvals
+
+An '''approval''' is a card with Approve / Deny buttons that an agent raises before doing something a person should decide. In [[Company Brain/awdiscord|awdiscord]] only users listed as operators can press the buttons.
+
+<span id="how-it-behaves"></span>
+== How it behaves ==
+
+* The button id carries an HMAC of the approval id and the verb, so it cannot be forged.
+* Only user ids in <code>AWDISCORD_OPERATORS</code> count.
+* A decision is taken exactly once.
+* The result is POSTed to your callback with an <code>X-Awdiscord-Signature</code> header (HMAC-SHA256 of the body under the same secret).
+* Without <code>AWDISCORD_APPROVAL_CHANNEL</code>, the card is DMed to each operator.
+
+<span id="raising-one-from-your-own-code"></span>
+== Raising one from your own code ==
+
+<syntaxhighlight lang="bash">export AWDISCORD_OPERATORS=<your user id>
+export AWDISCORD_APPROVAL_SECRET=$(python -c "import secrets;print(secrets.token_hex(32))")
+export AWDISCORD_INBOX_PORT=8371 AWDISCORD_INBOX_TOKEN=<a long random string>
+awdiscord run &
+awdiscord approval "Publish the release notes?" "v1.4 notes are drafted" \
+    --callback http://127.0.0.1:9000/decided</syntaxhighlight>
+<span id="related"></span>
+== Related ==
+
+* Voice-call action items that would spend money, delete data or publish externally are marked “needs a decision, not done” and never carried out. See the [[Company Brain/Guide: setting up your company brain in Discord#Voice calls|guide]].
+* Settings: [[Company Brain/awdiscord configuration variables|configuration variables]]
+* Same idea family: [[Company Brain/Safety and control|Safety and control]] (<code>awask</code>, <code>awpermit</code>, <code>awsuite</code> dry-runs)
+* Overall limits: [[Company Brain/Safety rails|Safety rails]]
+
+[[Category:Company Brain]]

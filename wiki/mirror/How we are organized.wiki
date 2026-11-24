@@ -1,0 +1,15 @@
+<span id="what-we-know"></span>
+== What we know ==
+
+* The movement takes its form from Occupy Wall Street: no appointed leaders, decisions made in the open. Targets are picked in public.
+* Each project lives in its own repository under [https://github.com/occupysaas github.com/occupysaas].
+* Spec writers and builders are kept separate by the clean-room firewall (see [[Rules of the road]]).
+* Releases need a maintainer’s approval (see [[How we develop]]).
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: how decisions are actually made today, who the maintainers are, and whether there is or will be a legal entity (this affects [[Fiscal sponsorship]]).
+* Once settled, record the roles on [[Roles]] and the outcomes in the [[Decision log]].
+
+[[Category:About]]

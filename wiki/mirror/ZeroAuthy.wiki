@@ -1,0 +1,69 @@
+''Source of truth: the [https://github.com/occupysaas/zeroauthy#readme ZeroAuthy README on GitHub]. This page is a summary as of 23 November 2026; check the README for the current state.''
+
+ZeroAuthy is an open-source, self-hostable identity server that speaks the Auth0 Authentication API. Point an existing Auth0 SDK at a ZeroAuthy tenant domain and it works with no code changes. It aims to be a 1:1, drop-in replacement for Auth0’s Authentication and Management APIs.
+
+{| class="wikitable"
+|-
+| '''Replaces'''
+| Auth0 (not affiliated; name used only to describe compatibility)
+|-
+| '''Status'''
+| v1.0.0-rc.1 release candidate, an early preview
+|-
+| '''Licence'''
+| Apache-2.0
+|-
+| '''Language'''
+| Go server, Vue and TypeScript admin console
+|-
+| '''Storage'''
+| SQLite, PostgreSQL, MySQL, gRPC storage plugins
+|-
+| '''Repo'''
+| [https://github.com/occupysaas/zeroauthy github.com/occupysaas/zeroauthy]
+|-
+| '''Release'''
+| [https://github.com/occupysaas/zeroauthy/releases/tag/v1.0.0-rc.1 v1.0.0-rc.1]
+|}
+
+<span id="what-works"></span>
+== What works ==
+
+* Authentication API, hosted login and signup, authorization code with PKCE, client credentials, password grants, rotating refresh tokens, device flow, consent and third-party applications
+* MFA and passwordless email and SMS
+* Database, custom database, Google, Microsoft and generic OAuth 2 and OIDC connections
+* The Management API (applications, APIs, connections, users, roles, organizations, Actions, branding, email and phone, custom domains, logs and event streams) and an admin console
+* Verified with auth0-spa-js, auth0-react, nextjs-auth0, express-openid-connect, auth0-auth-js, node-auth0, Auth0.NET, the Auth0 CLI and the Deploy CLI
+
+<span id="openid-certified"></span>
+== OpenID Certified ==
+
+ZeroAuthy is certified by the OpenID Foundation as an OpenID Connect Provider for the Basic OP, Config OP and Form Post OP profiles. Details are in the repo’s <code>docs/conformance.md</code>.
+
+<span id="what-does-not-work-yet"></span>
+== What does not work yet ==
+
+WebAuthn and passkeys, SAML, WS-Federation, enterprise directories, CIBA, JAR and token exchange. See the [https://github.com/occupysaas/zeroauthy/blob/v1.0.0-rc.1/docs/compatibility.md compatibility page] and [https://github.com/occupysaas/zeroauthy/blob/v1.0.0-rc.1/docs/compat/matrix.md matrix] before relying on it.
+
+<span id="try-it"></span>
+== Try it ==
+
+For testing only: this uses a self-signed certificate.
+
+<syntaxhighlight lang="bash">docker run -d --name zeroauthy -p 8443:8443 \
+  -v zeroauthy-data:/data \
+  -e ZEROAUTHY_SERVER__LISTEN=:8443 \
+  -e ZEROAUTHY_SERVER__SYSTEM_HOST=localhost:8443 \
+  -e ZEROAUTHY_SERVER__TLS_SELF_SIGNED=true \
+  -e ZEROAUTHY_SERVER__TLS_SELF_SIGNED_CA_FILE=/data/ca.pem \
+  -e ZEROAUTHY_SECURITY__MASTER_KEY="$(openssl rand -base64 32)" \
+  -e ZEROAUTHY_BOOTSTRAP__ADMIN_EMAIL=you@example.com \
+  ghcr.io/occupysaas/zeroauthy:1.0.0-rc.1</syntaxhighlight>
+ZeroAuthy also works as a disposable, Auth0-compatible login server for end-to-end tests: one container seeded with known tenants, apps and users.
+
+<span id="contribute"></span>
+== Contribute ==
+
+Read the [https://github.com/occupysaas/zeroauthy/blob/main/CLEAN_ROOM.md clean-room policy] first, then see [[Contributing to a project]].
+
+[[Category:Projects]]

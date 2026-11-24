@@ -1,0 +1,58 @@
+<span id="start-here"></span>
+== Start here ==
+
+{| class="wikitable"
+|-
+! I want to…
+! Go to
+|-
+| Put a company knowledge base in Discord
+| [[Company Brain/Guide: setting up your company brain in Discord|Guide: company brain in Discord]]
+|-
+| Know what a brick is, and which I need
+| [[#Browse by category|Categories]]
+|-
+| Look up a slash command
+| [[Company Brain/Discord command reference|Discord command reference]]
+|-
+| Understand why the bot asks me to approve things
+| [[Company Brain/Approvals|Approvals]]
+|}
+
+<span id="bricks-one-page-each"></span>
+== Bricks (one page each) ==
+
+* [[Company Brain/awdk|awdk]] — the core: agents, memory, model routing, the <code>adk</code> CLI
+* [[Company Brain/awdiscord|awdiscord]] — an agent on Discord as a real bot
+* [[Company Brain/awbrain|awbrain]] — your notes as a wiki of linked Markdown, claims pinned to source lines
+
+The full family is about 70 bricks. This wiki covers three so far.
+
+<span id="concepts-explained-once-linked-everywhere"></span>
+== Concepts (explained once, linked everywhere) ==
+
+* [[Company Brain/Approvals|Approvals]]
+* [[Company Brain/Safety rails|Safety rails]]
+* [[Company Brain/Bring your own model|Bring your own model]]
+* [[Company Brain/Plugins and packs|Plugins and packs]]
+
+<span id="reference"></span>
+== Reference ==
+
+* [[Company Brain/Discord command reference|Discord command reference]]
+* [[Company Brain/awdiscord configuration variables|awdiscord configuration variables]]
+* [[Company Brain/adk and awbrain command reference|adk and awbrain command reference]]
+
+<span id="browse-by-category"></span>
+== Browse by category ==
+
+* [[Company Brain/Memory and knowledge|Memory and knowledge]]
+* [[Company Brain/Safety and control|Safety and control]]
+* [[Company Brain/Channels|Channels (where agents talk to people)]]
+
+<span id="also"></span>
+== Also ==
+
+* [[Company Brain/Glossary|Glossary]]
+
+[[Category:Company Brain]]

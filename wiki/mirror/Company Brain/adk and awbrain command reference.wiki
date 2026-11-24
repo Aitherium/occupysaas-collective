@@ -1,0 +1,84 @@
+[[Company Brain]] › Reference › CLI commands
+
+== adk ==
+
+From [[Company Brain/awdk|awdk]].
+
+{| class="wikitable"
+|-
+! Command
+! What it does
+|-
+| <code>adk quickstart</code>
+| Detects hardware, pulls models, configures backends
+|-
+| <code>adk init NAME</code>
+| Scaffolds an agent project
+|-
+| <code>adk home serve [--channels ...] [--pair]</code>
+| Answers you on Telegram, Discord, Slack, email, WhatsApp, SMS; <code>--pair</code> prints a 6-digit code to DM the bot
+|-
+| <code>adk home channels</code>
+| Shows which channels have credentials in the environment
+|-
+| <code>adk mcp setup --mode remote --ide claude-code</code>
+| Writes an MCP client config
+|-
+| <code>adk harness parts</code>
+| Reports which family parts this machine has, and the install line for each missing one
+|}
+
+== awbrain ==
+
+From [[Company Brain/awbrain|awbrain]].
+
+{| class="wikitable"
+|-
+! Command
+! What it does
+|-
+| <code>awbrain harvest DIR</code>
+| Builds or refreshes the wiki from a folder of notes/sessions
+|-
+| <code>awbrain ask &quot;QUESTION&quot;</code>
+| Answers from the top-k pages only, with <code><nowiki>[[citation]]</nowiki></code> markers
+|-
+| <code>awbrain verify &quot;CLAIM&quot;</code>
+| Walks a claim back to the source file and line span, or says it cannot
+|-
+| <code>awbrain watch DIR</code>
+| Re-harvests changed sources
+|-
+| <code>awbrain status</code>
+| Receipts: sources, pages, claims, embedder mode
+|}
+
+== awdiscord ==
+
+Setup and administration commands (chat commands are on the [[Company Brain/Discord command reference|Discord command reference]]).
+
+{| class="wikitable"
+|-
+! Command
+! What it does
+|-
+| <code>awdiscord setup</code>
+| Validates the token, finds a model server, writes config, registers commands, prints the install link
+|-
+| <code>awdiscord run [--inbox-port N]</code>
+| Runs the bot; the port opens <code>GET /health</code>
+|-
+| <code>awdiscord approval TITLE BODY --callback URL</code>
+| Raises an [[Company Brain/Approvals|approval card]]
+|-
+| <code>awdiscord new-plugin NAME</code>
+| Scaffolds a plugin
+|-
+| <code>awdiscord plugins</code>
+| Proves plugins load
+|-
+| <code>awdiscord pack install\|list\|remove</code>
+| Manage [[Company Brain/Plugins and packs|packs]]
+|}
+
+[[Category:Company Brain]]

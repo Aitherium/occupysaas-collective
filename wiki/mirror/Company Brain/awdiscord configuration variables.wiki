@@ -1,0 +1,56 @@
+[[Company Brain]] › Reference › awdiscord configuration
+
+A selection of the environment variables [[Company Brain/awdiscord|awdiscord]] reads. <code>awdiscord setup</code> writes them to <code>~/.awdiscord/awdiscord.env</code> (mode 600).
+
+{| class="wikitable"
+|-
+! Variable
+! Meaning
+! Concept
+|-
+| <code>DISCORD_BOT_TOKEN</code> / <code>AWDISCORD_TOKEN</code>
+| The bot token
+| [[Company Brain/Guide: setting up your company brain in Discord#Step 3 — Install and run the bot|Guide step 3]]
+|-
+| <code>AWDISCORD_AGENT_URL</code>, <code>_MODEL</code>, <code>_KEY</code>
+| The agent behind <code>/ask</code>
+| [[Company Brain/Bring your own model|Bring your own model]]
+|-
+| <code>AWDISCORD_PERSONAS_DIR</code>
+| <code>&lt;name&gt;.md</code> or <code>&lt;name&gt;/SOUL.md</code> files become <code>/ask persona:</code> choices
+| [[Company Brain/Plugins and packs|Plugins and packs]]
+|-
+| <code>AWDISCORD_OPERATORS</code>
+| User ids who may press approval buttons
+| [[Company Brain/Approvals|Approvals]]
+|-
+| <code>AWDISCORD_APPROVAL_SECRET</code>
+| HMAC secret for buttons and callbacks
+| [[Company Brain/Approvals|Approvals]]
+|-
+| <code>AWDISCORD_APPROVAL_CHANNEL</code>
+| Post cards here instead of DMing operators
+| [[Company Brain/Approvals|Approvals]]
+|-
+| <code>AWDISCORD_INBOX_PORT</code>, <code>_TOKEN</code>, <code>_HOST</code>
+| Local inbox for approvals and notifications
+| [[Company Brain/Approvals|Approvals]]
+|-
+| <code>AWDISCORD_SERVED_GUILDS</code>
+| Server ids allowed to use the owner’s model
+| [[Company Brain/Safety rails|Safety rails]]
+|-
+| <code>AWDISCORD_STANDALONE=1</code>
+| Self-hosted: the env agent answers every server the bot is in
+| [[Company Brain/Bring your own model|Bring your own model]]
+|-
+| <code>AWDISCORD_STATE_DIR</code>
+| Where approvals and keys are stored (default <code>~/.awdiscord</code>)
+| [[Company Brain/Safety rails|Safety rails]]
+|-
+| <code>AWDISCORD_DEV_GUILD</code>
+| Also register commands on one server (instant, for testing)
+| [[Company Brain/Guide: setting up your company brain in Discord|Guide]]
+|}
+
+[[Category:Company Brain]]

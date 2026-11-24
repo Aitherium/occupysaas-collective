@@ -1,0 +1,55 @@
+A fiscal sponsor is a tax-exempt organization that lets a project receive grants and tax-deductible donations without forming its own non-profit. Details below were checked in August 2026 and change; confirm with each sponsor.
+
+<span id="the-two-models"></span>
+== The two models ==
+
+{| class="wikitable"
+|-
+!
+! Model A (comprehensive)
+! Model C (pre-approved grant)
+|-
+| '''Legal status of your project'''
+| Becomes a program of the sponsor
+| Stays a separate entity or group
+|-
+| '''Who holds the money'''
+| The sponsor, on your behalf
+| You, after the sponsor grants it to you
+|-
+| '''Who is responsible'''
+| The sponsor carries legal and financial responsibility and oversees the project
+| You carry most responsibility; the sponsor reviews the grant
+|-
+| '''Fit'''
+| Groups that want the sponsor to handle operations: payroll, contracts, insurance, compliance
+| Projects with a specific funder who has agreed to give, and that already run themselves
+|-
+| '''Cost'''
+| Usually a percentage fee on money received; commonly cited ranges are around 5 to 15 percent, set by each sponsor
+| Usually a fee on each grant, plus the sponsor’s review
+|}
+
+<span id="questions-to-ask-any-sponsor"></span>
+== Questions to ask any sponsor ==
+
+* Which model do you offer, and what fee do you charge on what?
+* Do you accept software and open source projects?
+* Is there a funding precondition? Some Model C programs, for example Tides Center’s, required committed funding of roughly 50,000 to 100,000 US dollars before submission when last checked.
+* What happens if a campaign or advocacy opportunity comes up while we are sponsored? (This matters most under Model A.)
+* Who owns the code and the brand if we leave?
+* How long does onboarding take, and what is the notice to leave?
+
+<span id="things-to-know-when-choosing"></span>
+== Things to know when choosing ==
+
+* '''Tax status matters.''' A 501(c)(3) sponsor can receive tax-deductible donations and foundation grants. A 501(c)(6) cannot. Open Source Collective, for example, is a 501(c)(6), so donations to it are not tax-deductible, and many foundation grants require a 501(c)(3) grantee.
+* '''Check the sponsor still exists.''' Open Collective Foundation dissolved at the end of 2024.
+* '''Candidates for open source projects:''' Software Freedom Conservancy is a long-standing sponsor of free and open source projects. Directories such as TSNE’s fiscal-sponsor directory list hundreds of others; screen by model, fee and mission fit.
+
+<span id="where-this-connects"></span>
+== Where this connects ==
+
+[[Basic business setup]], [[Grant-writing help]], [[How we are organized]].
+
+[[Category:Business resources]]

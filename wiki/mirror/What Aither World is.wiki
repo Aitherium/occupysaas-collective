@@ -1,0 +1,37 @@
+<span id="in-one-paragraph"></span>
+== In one paragraph ==
+
+Aither World is a family of small, single-purpose tools (about 70 “bricks”) for building and running AI agents on hardware you control. The core brick, [[Company Brain/awdk|awdk]], is a Python SDK and command-line tool for agents that run on your machines: a single agent or a fleet that delegates, with tools, persistent knowledge-graph memory, safety filtering and effort-based model routing.
+
+<span id="why-it-matters-to-occupysaas"></span>
+== Why it matters to OccupySaaS ==
+
+Our method has AI agents implement from a written specification, with a human reviewing every merge (see [[How we develop]]). Aither World is the engine intended for that step.
+
+<span id="the-bricks-we-document"></span>
+== The bricks we document ==
+
+{| class="wikitable"
+|-
+! Brick
+! What it does
+|-
+| [[Company Brain/awdk|awdk]]
+| The core: agents, memory, model routing, the <code>adk</code> command line
+|-
+| [[Company Brain/awdiscord|awdiscord]]
+| An agent on Discord as a real bot
+|-
+| [[Company Brain/awbrain|awbrain]]
+| Your notes as a wiki of linked Markdown, with claims pinned to source lines
+|}
+
+Shared ideas: [[Company Brain/Approvals|Approvals]], [[Company Brain/Safety rails|Safety rails]], [[Company Brain/Bring your own model|Bring your own model]].
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: which bricks the collective’s build pipeline actually uses today, and the right name and relationship between “Aither World”, “AitherOS” and the Aitherium GitHub organization that publishes the bricks.
+* The three brick pages come from the public READMEs and have not all been run by the collective.
+
+[[Category:Aither World]]

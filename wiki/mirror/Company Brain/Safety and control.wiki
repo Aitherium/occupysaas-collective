@@ -1,0 +1,53 @@
+[[Company Brain]] › Categories › Safety and control
+
+Bricks that stop an agent doing something its owner did not mean.
+
+{| class="wikitable"
+|-
+! Brick
+! Instead of trusting…
+! You check…
+! Page here
+|-
+| [[Company Brain/awdiscord|awdiscord]]
+| a bot that acts without asking
+| operator-only [[Company Brain/Approvals|approval buttons]]
+| yes
+|-
+| <code>awask</code>
+| that anyone read the paragraph where you asked
+| the ask itself, with a button
+| no
+|-
+| <code>awpermit</code>
+| that an admitted agent only does what its owner meant
+| a signed permit with scope and cap
+| no
+|-
+| <code>awsuite</code>
+| that an agent holding your mailbox will not send
+| dry-run until confirm is true
+| no
+|-
+| <code>awseal</code>
+| that an artifact came from who you think
+| an Ed25519 seal
+| no
+|-
+| <code>awdit</code>
+| silence
+| an append-only trail whose gaps are detectable
+| no
+|-
+| <code>awbac</code>
+| open-by-default access
+| role-based access that fails closed
+| no
+|}
+
+<span id="concepts"></span>
+== Concepts ==
+
+[[Company Brain/Approvals|Approvals]] · [[Company Brain/Safety rails|Safety rails]]
+
+[[Category:Company Brain]]

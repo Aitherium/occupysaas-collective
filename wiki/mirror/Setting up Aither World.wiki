@@ -1,0 +1,25 @@
+Commands below come from the awdk README as summarized on [[Company Brain/awdk|awdk]]. Check that page and the upstream README for the current versions.
+
+<span id="prerequisites"></span>
+== Prerequisites ==
+
+* Python 3.10 or later
+* A machine you control. The tools detect your hardware and pull local models, or you can use a hosted back end (see [[Company Brain/Bring your own model|Bring your own model]]).
+
+<span id="install-and-first-run"></span>
+== Install and first run ==
+
+<syntaxhighlight lang="bash">pip install awdk                      # or: uv tool install awdk, for the CLI
+adk quickstart                        # detects hardware, pulls models, configures backends
+adk init my-agent && cd my-agent && python agent.py</syntaxhighlight>
+<span id="add-a-discord-front-end"></span>
+== Add a Discord front end ==
+
+See [[Company Brain/awdiscord|awdiscord]] and the [[Company Brain/Guide: setting up your company brain in Discord|setup guide]]. Note that connecting awbrain to awdiscord is marked there as a proposal that has not been tested.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: the collective’s own configuration (which models, which hosts, who holds keys) and a first spec-to-code walkthrough using one of our projects.
+
+[[Category:Aither World]]

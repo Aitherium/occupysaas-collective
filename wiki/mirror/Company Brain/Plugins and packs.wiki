@@ -1,0 +1,62 @@
+[[Company Brain]] › Concepts › Plugins and packs
+
+<span id="plugins"></span>
+== Plugins ==
+
+Each Discord server turns plugins on and off for itself; the data is kept per server and never visible to another. A plugin’s persona text is added to <code>/ask</code> only where it is on.
+
+{| class="wikitable"
+|-
+! Plugin
+! Default
+! Commands
+|-
+| <code>community</code>
+| on
+| <code>/poll</code>, <code>/faq ask\|list\|set\|remove</code>, <code>/rules</code>
+|-
+| <code>projects</code>
+| off
+| <code>/task add\|list\|start\|done\|assign\|drop</code>, <code>/standup</code>
+|-
+| <code>github</code>
+| off
+| <code>/gh board\|untracked\|issue\|connect</code>
+|-
+| <code>hub</code>
+| on, operators only
+| <code>/today</code>, <code>/alerts</code>, <code>/signups</code>, <code>/issues</code>, <code>/reports</code> (needs an AitherOS fleet)
+|-
+| <code>join</code>
+| off
+| <code>/enlist</code>, <code>/progress</code>, <code>/certify</code>, <code>/lead</code> (a membership workflow)
+|}
+
+Manage with <code>/plugins list|info|enable|disable</code> (enable and disable need Manage Server).
+
+<span id="write-your-own"></span>
+=== Write your own ===
+
+<syntaxhighlight lang="bash">awdiscord new-plugin standup-bot      # scaffolds ~/.awdiscord/plugins/standup_bot.py
+awdiscord plugins                     # proves it loads</syntaxhighlight>
+<syntaxhighlight lang="python">from awdiscord.plugins import Command, Option, Plugin
+
+def hello(ctx):
+    return ctx.reply(f"hello <@{ctx.user}>")
+
+PLUGIN = Plugin(name="hello", version="0.1.0", description="Says hello",
+                commands=[Command("hello", "Say hello", hello)])</syntaxhighlight>
+<span id="packs"></span>
+== Packs ==
+
+<syntaxhighlight lang="bash">awdiscord pack install ./packs/dgg_pm
+awdiscord pack install https://github.com/org/repo#packs/x
+awdiscord pack list | remove NAME</syntaxhighlight>
+An '''agent pack''' (<code>brain_pack.yaml</code> / <code>agent.yaml</code> / <code>skills/</code>) becomes a plugin: its system prompt rides along on <code>/ask</code>, its skills are listed to the agent, and <code>/&lt;pack&gt; ask</code> answers in its voice.
+
+<span id="related"></span>
+== Related ==
+
+[[Company Brain/Discord command reference|Discord command reference]] · [[Company Brain/awdiscord|awdiscord]] · [[Company Brain/Guide: setting up your company brain in Discord|Guide]]
+
+[[Category:Company Brain]]

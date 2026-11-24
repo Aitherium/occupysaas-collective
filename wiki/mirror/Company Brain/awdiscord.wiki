@@ -1,0 +1,56 @@
+[[Company Brain]] › Bricks › awdiscord
+
+<blockquote>'''Put any agent on Discord as a real bot, with an operator in the loop.'''
+</blockquote>
+{| class="wikitable"
+|-
+| '''Category'''
+| [[Company Brain/Channels|Channels]] · [[Company Brain/Safety and control|Safety and control]]
+|-
+| '''Install'''
+| <code>pip install &quot;awdiscord[gateway]&quot;</code>
+|-
+| '''Source'''
+| https://github.com/Aitherium/awdiscord
+|-
+| '''Works with'''
+| [[Company Brain/awdk|awdk]] (<code>adk serve</code> agents), any OpenAI-compatible endpoint
+|-
+| '''Status'''
+| Documented in its README; not yet run by the collective
+|}
+
+<span id="what-it-is"></span>
+== What it is ==
+
+An agent behind an OpenAI-compatible endpoint (an <code>adk serve</code> agent, llama.cpp, vLLM, Ollama, LM Studio, a gateway) becomes a Discord bot with slash commands, per-server [[Company Brain/Plugins and packs|plugins]], rate limits, and [[Company Brain/Approvals|approval buttons]] only operators can press.
+
+<span id="setup"></span>
+== Setup ==
+
+<syntaxhighlight lang="bash">pip install "awdiscord[gateway]"
+awdiscord setup
+awdiscord run</syntaxhighlight>
+You create the application yourself at the Discord developer portal and paste the bot token once. <code>setup</code> does the rest. Walk-through: [[Company Brain/Guide: setting up your company brain in Discord|Guide: company brain in Discord]].
+
+<span id="what-you-get"></span>
+== What you get ==
+
+* Slash commands: see the [[Company Brain/Discord command reference|command reference]]
+* Built-in plugins: community, projects, github, hub, join
+* Voice calls with notes, summaries and action items
+* [[Company Brain/Bring your own model|Bring your own model]] per server with <code>/model</code>
+* A local inbox for approvals and notifications from your own code
+* [[Company Brain/Safety rails|Safety rails]]
+
+<span id="configuration"></span>
+== Configuration ==
+
+See [[Company Brain/awdiscord configuration variables|awdiscord configuration variables]].
+
+<span id="running-under-a-supervisor"></span>
+== Running under a supervisor ==
+
+<code>awdiscord run --inbox-port 8371</code> opens <code>GET /health</code>. The awdk addon manifest uses it, so <code>adk addon</code> can start, health-check and restart the bot.
+
+[[Category:Company Brain]]

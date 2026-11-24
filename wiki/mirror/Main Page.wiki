@@ -1,0 +1,54 @@
+<span id="they-laid-us-off.-were-rebuilding-their-saas."></span>
+= They laid us off. We’re rebuilding their SaaS. =
+
+OccupySaaS is a protest movement written in code. Laid-off engineers, armed with AI and public documentation, are building clean-room, open-source, drop-in replacements for the platforms that rent our own industry back to us, one seat at a time.
+
+This wiki is the collective’s working handbook: who we are, how we build, and how to join in. The public face of the movement is [https://occupysaas.com/ occupysaas.com].
+
+<span id="start-here"></span>
+== Start here ==
+
+{| class="wikitable"
+|-
+! I want to…
+! Go to
+|-
+| Understand what this is about
+| [[Mission and vision]], [[Elevator pitch]]
+|-
+| Try something we have built
+| [[ZeroAuthy]], [[SalesCompel]]
+|-
+| Help build
+| [[Welcome and onboarding]], [[Contributing to a project]]
+|-
+| Propose the next target
+| [[How to propose a new project]]
+|-
+| Explain us to someone else
+| [[Outreach: how to describe us to people outside the collective|Outreach]]
+|-
+| Edit this wiki
+| [[How to edit]]
+|}
+
+<span id="sections"></span>
+== Sections ==
+
+* [[About]]: mission, rules of the road, how we are organized
+* [[Communications]]: how we talk about the movement
+* [[Projects]]: ZeroAuthy, SalesCompel, Company Brain, and how to propose a new one
+* [[Academy]]: training content
+* [[Business resources]]: funding and business setup for members building on our open source commons
+* [[Aither World]]: our development engine
+* [[Engineering]]: onboarding, how we develop, tools
+* [[Governance and decisions]]: roles, decision log, joining and leaving
+* [[Wiki help]]: editing, style, where things go
+
+<span id="where-the-work-happens"></span>
+== Where the work happens ==
+
+* Code: [https://github.com/occupysaas github.com/occupysaas]
+* Chat: [https://discord.gg/jZYA3r27tG Discord]
+
+Product names on this wiki are used only to describe compatibility. OccupySaaS and its projects are independent and not affiliated with, endorsed by, or sponsored by any vendor named here.

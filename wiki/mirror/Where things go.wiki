@@ -1,0 +1,45 @@
+{| class="wikitable"
+|-
+! If it is about…
+! Put it in
+|-
+| Who we are, rules, how we are organized, terms
+| [[About]]
+|-
+| How we talk about the movement
+| [[Communications]]
+|-
+| A specific project, or a new target proposal
+| [[Projects]]
+|-
+| Training modules
+| [[Academy]]
+|-
+| Funding and starting a business
+| [[Business resources]]
+|-
+| The AI development engine
+| [[Aither World]]
+|-
+| Onboarding, process, tools
+| [[Engineering]]
+|-
+| Roles, decisions, joining and leaving
+| [[Governance and decisions]]
+|-
+| How this wiki works
+| [[Wiki help]]
+|-
+| Documentation of the Aither tools
+| [[Company Brain]]
+|}
+
+<span id="rules-of-thumb"></span>
+== Rules of thumb ==
+
+* A project’s own documentation lives in its repository; the wiki page is a summary that links back to the README.
+* A decision goes in the [[Decision log]], not only in chat.
+* If a page fits two sections, put it in one and link from the other.
+* Keep working notes out of page text. Use the <code>TODO:</code> convention from the [[Style guide]].
+
+[[Category:Wiki help]]

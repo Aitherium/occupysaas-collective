@@ -1,0 +1,65 @@
+<span id="active-projects"></span>
+== Active projects ==
+
+{| class="wikitable"
+|-
+! Project
+! Replaces
+! Status
+|-
+| [[ZeroAuthy]]
+| Auth0
+| Release candidate v1.0.0-rc.1 (early preview)
+|-
+| [[SalesCompel]]
+| Salesforce
+| Early; compatibility laboratory and walking slice
+|-
+| [[Company Brain]]
+| n/a
+| Documentation set for a family of small tools that put a company knowledge base behind a Discord bot
+|}
+
+<span id="the-occupation-map"></span>
+== The occupation map ==
+
+Every category on this board is a monthly invoice somewhere. The movement picks the next target in public.
+
+{| class="wikitable"
+|-
+! Category
+! Idea
+! Status
+|-
+| Identity and auth
+| ZeroAuthy: Auth0-compatible login, tokens and tenants
+| Occupied
+|-
+| CRM
+| SalesCompel: Salesforce-compatible records and REST API
+| Occupied
+|-
+| Docs and wikis
+| Team knowledge bases that do not lock your writing behind a seat licence
+| Proposed
+|-
+| Issue tracking
+| Tickets, sprints and boards with a compatible API for existing integrations
+| Proposed
+|-
+| Feature flags
+| SDK-compatible flag evaluation you can run next to your own services
+| Proposed
+|-
+| Observability
+| Logs, metrics and traces without per-gigabyte ransom notes
+| Proposed
+|-
+| Customer support
+| Help desk, inbox and knowledge base, priced at zero agents
+| Proposed
+|}
+
+Proposed categories are open for discussion, not commitments. See [[How to propose a new project]].
+
+[[Category:Projects]]

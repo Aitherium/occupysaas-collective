@@ -1,0 +1,8 @@
+How we talk about the movement.
+
+* [[Outbound messaging]]: core messages, proof points, tone and the claims we can and cannot make
+* [[Outreach: how to describe us to people outside the collective|Outreach]]: how to describe us to people outside the collective
+
+Public channels today: the website [https://occupysaas.com/ occupysaas.com], the [https://github.com/occupysaas GitHub organization], and [https://discord.gg/jZYA3r27tG Discord].
+
+[[Category:Communications]]

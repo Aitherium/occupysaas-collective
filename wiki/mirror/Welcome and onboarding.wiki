@@ -1,0 +1,26 @@
+You do not need permission, a badge or a manager. You need a laptop and an afternoon.
+
+<span id="your-first-afternoon"></span>
+== Your first afternoon ==
+
+# Read [[Mission and vision]] and [[Rules of the road]]. The clean-room rules are not optional.
+# Join [https://discord.gg/jZYA3r27tG Discord] and the [https://github.com/occupysaas GitHub organization].
+# Pick a way in:
+#* '''Write code:''' pick an open issue, follow the clean-room policy, open a pull request.
+#* '''Self-host it:''' run a release against your real SDKs and tell us exactly where it breaks.
+#* '''Write specs:''' turn public docs into precise, testable specifications for the builders.
+#* '''Make noise:''' star the repos, share the site, and tell your CFO what you are paying per seat.
+# Run something: try [[ZeroAuthy]] with its Docker command, or the [[SalesCompel]] compatibility laboratory.
+# Tell someone on Discord what you did and what confused you. Fix this page if you can.
+
+<span id="before-you-contribute-code"></span>
+== Before you contribute code ==
+
+If you worked for one of the vendors whose products we replicate, read [[Rules of the road]] first and ask before touching that project.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: a named onboarding contact or buddy system, and a “good first issue” label convention.
+
+[[Category:Engineering]]

@@ -1,0 +1,20 @@
+<span id="joining"></span>
+== Joining ==
+
+There is no application. You do not need permission, a badge or a manager.
+
+# Join [https://discord.gg/jZYA3r27tG Discord] and the [https://github.com/occupysaas GitHub organization].
+# Read [[Rules of the road]]. If you have confidential knowledge from a former employer, say so before choosing a project.
+# Follow [[Welcome and onboarding]].
+
+<span id="leaving"></span>
+== Leaving ==
+
+Leave whenever you like. Your contributions stay under the project’s Apache-2.0 licence.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: what a “member” is (versus a contributor), how write access and shared accounts are granted, and the offboarding checklist (access removal, credentials rotation, hand-over of work in progress). See [[Tools and services]].
+
+[[Category:Governance and decisions]]

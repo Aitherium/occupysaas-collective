@@ -1,0 +1,95 @@
+''Source of truth: the [https://github.com/occupysaas/salescompel#readme SalesCompel README on GitHub]. This page is a summary as of 23 November 2026; check the README for the current state.''
+
+SalesCompel is an open-source, free-to-use Salesforce replacement project, with a tenant-isolated Go and PostgreSQL candidate and a Vue record workflow.
+
+{| class="wikitable"
+|-
+| '''Replaces'''
+| Salesforce (not affiliated; name used only to describe compatibility)
+|-
+| '''Status'''
+| Early. Not production-ready, not certified, and makes no 1:1 compatibility claim
+|-
+| '''Licence'''
+| Apache-2.0
+|-
+| '''Language'''
+| Go, Vue, TypeScript
+|-
+| '''Storage'''
+| PostgreSQL, multi-tenant
+|-
+| '''Repo'''
+| [https://github.com/occupysaas/salescompel github.com/occupysaas/salescompel]
+|}
+
+<span id="what-works-today"></span>
+== What works today ==
+
+* Persistent Account and Contact create, read, update and delete
+* Object describe and limited queries, plus a SOQL query engine with parent paths, subqueries, aggregates and paging
+* External-ID upsert and bearer authentication
+* OAuth login and identity (authorization code with PKCE, refresh, JWT bearer, client credentials)
+* Composite and sObject Collections
+* An OpenAPI REST contract and an offline compatibility laboratory
+* An exploratory Vue UI prototype using synthetic data, with light and dark themes and localization including right-to-left
+
+<span id="what-is-not-in-the-first-release"></span>
+== What is not in the first release ==
+
+Apex, Flow and custom UI (LWC, Aura, Visualforce) are excluded from the first release and come later. Orgs that rely on them cannot move yet.
+
+<span id="roadmap"></span>
+== Roadmap ==
+
+The next goal is a <code>0.x</code> early preview for new teams and simple Salesforce orgs: a working sales CRM with a Salesforce-compatible API that standard clients can use, and an import with a dry-run report naming what will not carry over.
+
+{| class="wikitable"
+|-
+! Milestone
+! Status
+|-
+| M0 Target inventory
+| Partial
+|-
+| M1 Behavior laboratory
+| Partial; pilot baseline accepted
+|-
+| M2 Platform walking slice
+| Walking slice accepted; milestone open
+|-
+| M3 Protocol and query fidelity
+| Early implementation
+|-
+| M4 Metadata and security
+| Bounded slices implemented
+|-
+| M5 Migration
+| Planning and contracts
+|-
+| M6 Sales workflows and UI
+| Early prototype implemented
+|-
+| M7 Automation and customization
+| Feasibility work remains
+|-
+| M8 Integrations and events
+| Contract outlines
+|-
+| M9 Production certification
+| Not reached
+|}
+
+The README gives rough scope estimates for the first release and for full certification; they are not delivery-date forecasts.
+
+<span id="try-the-compatibility-laboratory"></span>
+== Try the compatibility laboratory ==
+
+<syntaxhighlight lang="sh">npm ci --prefix compat/clients/node --ignore-scripts
+npm --prefix compat/clients/node run check</syntaxhighlight>
+<span id="contribute"></span>
+== Contribute ==
+
+Contributions follow the clean-room policy ([https://github.com/occupysaas/salescompel/blob/main/CLEAN_ROOM.md CLEAN_ROOM.md]). See [[Contributing to a project]].
+
+[[Category:Projects]]

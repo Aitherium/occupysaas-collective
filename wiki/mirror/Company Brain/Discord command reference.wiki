@@ -1,0 +1,90 @@
+[[Company Brain]] › Reference › Discord commands
+
+All slash commands from [[Company Brain/awdiscord|awdiscord]], grouped by where they come from. In a real wiki this table would live in '''one place''' and be transcluded into the guide, the brick page and the plugin page, so it can never drift.
+
+<span id="core"></span>
+== Core ==
+
+{| class="wikitable"
+|-
+! Command
+! What it does
+! Who
+|-
+| <code>/ask question [persona] [private]</code>
+| The agent answers; <code>private</code> shows only you
+| anyone
+|-
+| <code>/share</code>
+| Posts your last answer in the channel
+| anyone
+|-
+| <code>/status</code>
+| Is the agent up, which personas exist
+| anyone
+|-
+| <code>/model setup\|test\|status\|off</code>
+| Run this server on its own endpoint ([[Company Brain/Bring your own model|details]])
+| Manage Server
+|-
+| <code>/selfhost</code>
+| Wizard from no model to this server’s own endpoint
+| Manage Server
+|-
+| <code>/plugins list\|info\|enable\|disable</code>
+| What this server has on
+| enable/disable: Manage Server
+|}
+
+<span id="from-plugins"></span>
+== From plugins ==
+
+See [[Company Brain/Plugins and packs|Plugins and packs]] for defaults and how to enable.
+
+{| class="wikitable"
+|-
+! Plugin
+! Commands
+|-
+| community
+| <code>/poll</code>, <code>/faq ask\|list\|set\|remove</code>, <code>/rules</code>
+|-
+| projects
+| <code>/task add\|list\|start\|done\|assign\|drop</code>, <code>/standup</code>
+|-
+| github
+| <code>/gh board\|untracked\|issue\|connect</code>
+|-
+| hub
+| <code>/today</code>, <code>/alerts [n]</code>, <code>/signups [hours]</code>, <code>/issues</code>, <code>/reports</code>
+|-
+| join
+| <code>/enlist</code>, <code>/progress</code>, <code>/certify</code>, <code>/lead</code>
+|}
+
+<span id="voice"></span>
+== Voice ==
+
+{| class="wikitable"
+|-
+! Command
+! What it does
+|-
+| <code>/join</code>, <code>/leave</code>
+| Move the bot in and out of a voice channel
+|-
+| <code>/calls mode:on</code>
+| Turn on self-running calls for this server (bot owner)
+|-
+| <code>/calls</code>
+| See what is on (answered privately)
+|}
+
+Spoken: “Aither, take notes” · “Aither, off the record” · “Aither, back on the record” · “Aither, stop” · “Aither, create a task to …”
+
+<span id="see-also"></span>
+== See also ==
+
+[[Company Brain/Approvals|Approvals]] · [[Company Brain/Safety rails|Safety rails]] · [[Company Brain/awdiscord configuration variables|Configuration]]
+
+[[Category:Company Brain]]

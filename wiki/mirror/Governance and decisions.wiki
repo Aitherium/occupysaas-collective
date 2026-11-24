@@ -1,0 +1,9 @@
+Occupy Wall Street had no leaders and decided things in open assemblies. The collective borrows that spirit; this section records how it works in practice.
+
+* [[Roles]]
+* [[Decision log]]
+* [[How to join and how to leave]]
+
+See also [[How we are organized]].
+
+[[Category:Governance and decisions]]

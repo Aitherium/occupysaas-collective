@@ -1,0 +1,62 @@
+Drafted from occupysaas.com. This is the source of truth for public wording until the collective agrees otherwise.
+
+<span id="core-line"></span>
+== Core line ==
+
+'''They laid us off. We’re rebuilding their SaaS.'''
+
+<span id="message-pillars"></span>
+== Message pillars ==
+
+{| class="wikitable"
+|-
+! Pillar
+! Say
+|-
+| Fairness
+| Per-seat pricing is a tax on growth; infrastructure should not charge rent by the head
+|-
+| Freedom
+| Lock-in is not a feature; compatible open alternatives set customers free
+|-
+| Craft
+| A million engineers were let go; we still know how to ship, and we ship in the open
+|-
+| Method
+| Clean room, AI rebuild, drop-in, proven against the vendors’ own public SDKs
+|-
+| Ownership
+| Your code, your data, your servers; no seats, no renewals, nobody who can switch it off but you
+|}
+
+<span id="proof-points-we-can-cite"></span>
+== Proof points we can cite ==
+
+* [[ZeroAuthy]] is OpenID Certified for the Basic OP, Config OP and Form Post OP profiles, and is tested with several Auth0 SDKs and CLIs.
+* Every project is Apache-2.0 and self-hostable.
+* Each project publishes a clean-room policy and source provenance so anyone can check the work.
+
+<span id="claims-we-do-not-make"></span>
+== Claims we do not make ==
+
+* That either project is production-ready (both are early previews).
+* That SalesCompel is certified, or fully compatible with Salesforce.
+* Any affiliation with, or endorsement by, Auth0, Okta or Salesforce.
+* Legal advice. Clean-room reimplementation is a long-established way to build compatible software, but anyone adopting a project for a business should talk to their own counsel.
+
+<span id="tone"></span>
+== Tone ==
+
+Direct, a little defiant, never abusive toward individuals or vendors’ staff. The protest is aimed at pricing and lock-in models, not at people.
+
+<span id="fundraising-wording"></span>
+== Fundraising wording ==
+
+Donations support the collective doing the work. We run two fundraisers because some people will not use one platform or the other: GoFundMe and GiveSendGo, plus Buy Me a Coffee for small tips.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: who may speak for the collective, the approval process for press statements, and a press contact.
+
+[[Category:Communications]]

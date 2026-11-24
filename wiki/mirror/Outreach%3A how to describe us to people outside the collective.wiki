@@ -1,0 +1,44 @@
+Pick the version that matches your audience, and keep the claims honest (see [[Outbound messaging]]).
+
+<span id="by-audience"></span>
+== By audience ==
+
+{| class="wikitable"
+|-
+! Audience
+! Lead with
+|-
+| A developer
+| “An Auth0-compatible identity server you can self-host. Point your existing Auth0 SDK at it and log in.” See [[ZeroAuthy]].
+|-
+| A CTO or CFO
+| “No seat counter, no renewal, nobody who can switch it off but you. It is an early preview, so test it before relying on it.”
+|-
+| A laid-off engineer
+| “We are a collective of people in the same position, building something in the open. No permission or manager needed; you need a laptop and an afternoon.” See [[Welcome and onboarding]].
+|-
+| Press
+| The [[Elevator pitch]], the two project pages, and a pointer to the clean-room policy
+|-
+| A potential funder
+| The [[Mission and vision]], and the [[Funding]] page for how the collective is supported
+|}
+
+<span id="answers-to-fair-questions"></span>
+== Answers to fair questions ==
+
+'''Is this legal?''' Clean-room reimplementation is a long-established way to build compatible software: you work only from public information and independently write your own code. Interoperating with an API is not the same as copying a product. Each project publishes its clean-room policy and provenance. This is not legal advice.
+
+'''Are you affiliated with Auth0, Okta or Salesforce?''' No. We are independent, and product names are used only to describe compatibility.
+
+'''Can former employees of those companies contribute?''' Yes, but never with confidential knowledge from a former employer. See [[Rules of the road]].
+
+'''Why use AI to build it?''' The incumbents had thousands of engineers and we have a movement. AI agents turn a precise spec into working code quickly. Humans write the specs, review every change and own the result, and compatibility tests against real SDKs decide what counts as done.
+
+'''Is it production-ready?''' Not yet. ZeroAuthy’s first release candidate is an early preview, and its compatibility matrix lists the gaps. SalesCompel is earlier still.
+
+'''What does it cost?''' Nothing. Every project is Apache-2.0: run it, fork it, sell services around it, and contribute back what you can.
+
+'''Why Go, and not Rust?''' Go produces a single self-contained binary that is easy to self-host. Rust recreations are welcome; the specs and compatibility tests are language-neutral. To start one, open an issue naming the project.
+
+[[Category:Communications]]

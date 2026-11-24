@@ -1,0 +1,38 @@
+[[Company Brain]] › Concepts › Safety rails
+
+What [[Company Brain/awdiscord|awdiscord]] refuses to do, whatever the agent says.
+
+{| class="wikitable"
+|-
+! Rail
+! Rule
+|-
+| '''Bot tokens only'''
+| Every request is sent as <code>Authorization: Bot &lt;token&gt;</code>; the runtime asks Discord who owns the token first. A user account is refused, because driving a person’s account (a self-bot) breaks Discord’s terms
+|-
+| '''Least permission'''
+| Install link asks for <code>bot</code> + <code>applications.commands</code> and four permissions: view channel, send messages, embed links, read message history. It refuses administrator, manage-server, manage-roles, manage-webhooks, ban, kick and mention-everyone
+|-
+| '''Rate limits'''
+| Token buckets per user, per server and for the whole bot; a refusal says how long to wait
+|-
+| '''Mentions off'''
+| Every answer goes out with <code>allowed_mentions: {parse: []}</code>, so an agent cannot ping <code>@everyone</code>
+|-
+| '''Approvals'''
+| Operator-only buttons; see [[Company Brain/Approvals|Approvals]]
+|-
+| '''Who may use your model'''
+| Only the home server and servers in <code>AWDISCORD_SERVED_GUILDS</code> reach your agent; others are told to [[Company Brain/Bring your own model|bring their own model]]
+|-
+| '''Secrets at rest'''
+| Per-server API keys are written to a mode-600 file in a mode-700 directory, never to the database
+|}
+
+<span id="related"></span>
+== Related ==
+
+* [[Company Brain/awdiscord configuration variables|Configuration variables]]
+* [[Company Brain/Safety and control|Safety and control]] for the wider family (<code>awpermit</code>, <code>awseal</code>, <code>awdit</code>, <code>awbac</code>)
+
+[[Category:Company Brain]]

@@ -1,0 +1,3 @@
+How to edit this wiki, its style, and where things go.
+
+[[Category:Domains]]

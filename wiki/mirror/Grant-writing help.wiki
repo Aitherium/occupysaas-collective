@@ -1,0 +1,60 @@
+<span id="before-you-write"></span>
+== Before you write ==
+
+# '''Confirm eligibility first.''' Read the funder’s eligibility page. Do they need a legal entity or tax-exempt status? A fiscal sponsor (see [[Fiscal sponsorship]]) may be needed.
+# '''Confirm the funder is active.''' Some funders have closed or stopped taking unsolicited applications.
+# '''Match their scope.''' A fund for internet infrastructure will not want a user-facing app. Pitch the part of your work that fits.
+# '''Note the deadline''' and the maximum first-proposal amount.
+
+<span id="a-proposal-skeleton"></span>
+== A proposal skeleton ==
+
+{| class="wikitable"
+|-
+! Section
+! What goes in it
+|-
+| Problem
+| Who is harmed by the status quo, with evidence (per-seat pricing, lock-in, export walls)
+|-
+| Solution
+| What you built or will build, and what is already working (demo rather than promise)
+|-
+| Why you
+| Track record, public repositories, certifications such as the OpenID certification of [[ZeroAuthy]]
+|-
+| Plan and milestones
+| Scoped work, each step checkable
+|-
+| Budget
+| Hours, rates, infrastructure, and the fee if you use a sponsor
+|-
+| Risks
+| Honest list: maturity, clean-room safety, bus factor
+|-
+| Outcomes
+| What the public gets, measured by compatibility tests passing, releases, adopters
+|}
+
+<span id="tips"></span>
+== Tips ==
+
+* Lead with what already runs. Say plainly what is planned versus shipped.
+* Keep the clean-room method and provenance front and centre: it answers legal worries.
+* Use the funder’s own words for their goals.
+
+<span id="where-to-find-funders"></span>
+== Where to find funders ==
+
+* '''Foundation Directory Online:''' free through participating public libraries, paid otherwise. Check whether a library near you participates.
+* '''GrantStation:''' a subscription database; it is cheaper through a non-profit association or TechSoup, which runs an annual sale.
+* '''GrantStation weekly newsletter:''' free, covers grantmaker news and deadlines.
+* '''Bank philanthropy programs''' (for example Bank of America, Wells Fargo, TD Bank, Chase, Capital One): worth checking starting with banks in your area.
+* See [[Non-profit funding sources]] for open source funders.
+
+<span id="open-items"></span>
+== Open items ==
+
+* TODO: needs input from the founders: a worked example proposal for one of our projects.
+
+[[Category:Business resources]]
